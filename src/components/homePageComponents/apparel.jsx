@@ -1,57 +1,29 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
-import images from "../../assets/images";
 import { NavLink } from "react-router-dom";
 function Apparel() {
   return (
-    <Box
-      sx={{
-        backgroundImage: `url(${images.apparel})`,
-        backgroundSize: "cover",
-        width: "50%",
-        height: "100%",
-        opacity: "0.8",
-        pt: 10,
-      }}
-    >
-      {/* Home Heading */}
-      <Box>
-        <Typography
-          variant="h1"
-          sx={{
-            textAlign: "right",
-            color: "white",
-            fontWeight: "400",
-            pb: 1,
-            letterSpacing: "1px",
-            pr: "2px",
-          }}
-        >
-          PAR
-        </Typography>
-        <Typography
-          sx={{
-            textAlign: "right",
-            color: "white",
-            fontSize: "17px",
-            lineHeight: "27px",
-            pr: "3px",
-            letterSpacing: "2px",
-            fontWeight: "500",
-          }}
-        >
-          We are an innovative, original design {"  "}
-        </Typography>
-      </Box>
+    <Box>
       {/* Apparel Link Section */}
       <Box
         sx={{
-          height: "100%",
+          height: {
+            xs: "300px",
+            sm: "300px",
+            md: "300px",
+            lg: "100%",
+            xl: "100%",
+          },
           width: "100%",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          p: 18,
+          justifyContent: "center",
+          p: {
+            xs: 3,
+            md: 5,
+            lg: 16,
+          },
         }}
       >
         {/* Apparel Heading */}
@@ -77,7 +49,12 @@ function Apparel() {
             lineHeight: "27px",
             color: "white",
             textAlign: "center",
-            width: "65%",
+            width: {
+              xs: "100%",
+              sm: "100%",
+              md: "100%",
+              lg: "65%",
+            },
             pt: 2,
             pb: 3,
           }}
@@ -123,4 +100,3 @@ function Apparel() {
 }
 
 export default Apparel;
-// APPAREL

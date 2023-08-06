@@ -20,11 +20,13 @@ const navButton = {
   borderRadius: "0",
   border: "1px solid transparent",
   pt: "15px",
+  // px: "15px",
 };
 function Navbar() {
   return (
     <Box sx={{ width: "100%", display: "flex", flexDirection: "column" }}>
       <AppBar
+        disableGutters
         elevation={0}
         sx={{
           height: "90px",
@@ -32,32 +34,15 @@ function Navbar() {
           bgcolor: "#192d34",
           color: "#bde7fd",
           justifyContent: "center",
-          pl: {
-            md: 1,
-            lg: 1,
-            xl: 9,
-          },
+          pl: 9,
         }}
       >
-        <Toolbar>
+        <Toolbar disableGutters>
           <Stack direction="row">
             <Button
-              component={Link}
-              to="/apparel"
               sx={{
                 ...navButton,
-                width: {
-                  xs: "0",
-                  sm: "0",
-                  md: "0",
-                  lg: "60px",
-                },
-                display: {
-                  xs: "none",
-                  sm: "none",
-                  md: "none", // Hide the button at medium breakpoint
-                  lg: "block", // Show the button at large breakpoint
-                },
+                width: "120px",
                 "&:hover": {
                   color: "#e6f6fe",
                   borderTop: "1px solid #bde7fd",
@@ -71,18 +56,7 @@ function Navbar() {
             <Button
               sx={{
                 ...navButton,
-                width: {
-                  xs: "0",
-                  sm: "0",
-                  md: "0",
-                  lg: "120px",
-                },
-                display: {
-                  xs: "none",
-                  sm: "none",
-                  md: "none", // Hide the button at medium breakpoint
-                  lg: "block", // Show the button at large breakpoint
-                },
+                width: "130px",
                 "&:hover": {
                   color: "#e6f6fe",
                   borderTop: "1px solid #bde7fd",
@@ -98,18 +72,7 @@ function Navbar() {
               to="/how-to-order"
               sx={{
                 ...navButton,
-                width: {
-                  xs: "0",
-                  sm: "0",
-                  md: "0",
-                  lg: "150px",
-                },
-                display: {
-                  xs: "none",
-                  sm: "none",
-                  md: "none", // Hide the button at medium breakpoint
-                  lg: "block", // Show the button at large breakpoint
-                },
+                width: "150px",
                 "&:hover": {
                   color: "#e6f6fe",
                   borderTop: "1px solid #bde7fd",
@@ -125,18 +88,7 @@ function Navbar() {
               to="/about-us"
               sx={{
                 ...navButton,
-                width: {
-                  xs: "0",
-                  sm: "0",
-                  md: "0",
-                  lg: "120px",
-                },
-                display: {
-                  xs: "none",
-                  sm: "none",
-                  md: "none", // Hide the button at medium breakpoint
-                  lg: "block", // Show the button at large breakpoint
-                },
+                width: "130px",
                 "&:hover": {
                   color: "#e6f6fe",
                   borderTop: "1px solid #bde7fd",
@@ -152,18 +104,7 @@ function Navbar() {
               to="/contact-us"
               sx={{
                 ...navButton,
-                width: {
-                  xs: "0",
-                  sm: "0",
-                  md: "0",
-                  lg: "120px",
-                },
-                display: {
-                  xs: "none",
-                  sm: "none",
-                  md: "none", // Hide the button at medium breakpoint
-                  lg: "block", // Show the button at large breakpoint
-                },
+                width: "130px",
                 "&:hover": {
                   color: "#e6f6fe",
                   borderTop: "1px solid #bde7fd",
@@ -183,10 +124,7 @@ function Navbar() {
               fontSize: "48px",
               lineHeight: "20px",
               fontFamily: "'Oswald', sans-serif",
-              pl: {
-                lg: 8,
-                xl: 20,
-              },
+              pl: 20,
               letterSpacing: "2px",
             }}
           >
