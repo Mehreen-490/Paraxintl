@@ -1,55 +1,31 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
-import images from "../../assets/images";
+import { Link } from "react-router-dom";
 function Surgical() {
   return (
-    <Box
-      sx={{
-        backgroundImage: `url(${images.surgical})`,
-        backgroundSize: "cover",
-        width: "50%",
-        height: "100%",
-        opacity: "0.8",
-        pt: 10,
-      }}
-    >
-      {/* Home Heading */}
-      <Box>
-        <Typography
-          variant="h1"
-          sx={{
-            color: "white",
-            fontWeight: "400",
-            pb: 1,
-            letterSpacing: "1px",
-            pl: "2px",
-          }}
-        >
-          AX
-        </Typography>
-        <Typography
-          sx={{
-            color: "white",
-            fontSize: "17px",
-            lineHeight: "27px",
-            pl: "2px",
-            letterSpacing: "2px",
-            fontWeight: "500",
-          }}
-        >
-          {" "}
-          manufacturer, and export company
-        </Typography>
-      </Box>
+    <Box>
       {/* Surgical Link Section */}
       <Box
         sx={{
-          height: "100%",
+          height: {
+            xs: "300px",
+            sm: "300px",
+            md: "300px",
+            lg: "100%",
+            xl: "100%",
+          },
           width: "100%",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          p: 16,
+          p: {
+            xs: 3,
+            md: 5,
+            lg: 16,
+          },
+          mb: {
+            xs: "10px",
+          },
         }}
       >
         {/* Surgical Heading */}
@@ -75,7 +51,12 @@ function Surgical() {
             lineHeight: "27px",
             color: "white",
             textAlign: "center",
-            width: "60%",
+            width: {
+              xs: "100%",
+              sm: "100%",
+              md: "100%",
+              lg: "65%",
+            },
             pt: 2,
             pb: 2,
           }}
@@ -83,9 +64,11 @@ function Surgical() {
           Parax International is a leading manufacturing company of General
           Surgical and Gynecology Instruments.
         </Typography>
-        {/* Apparel Link Button */}
+        {/* Surgical Link Button */}
         <Button
           variant="outlined"
+          component={Link}
+          to="/surgical/about-us"
           sx={{
             border: "2px solid white",
             borderRadius: "0",
