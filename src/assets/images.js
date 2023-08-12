@@ -22,4 +22,11 @@ export default {
   color: require("./images/1234.jpg"),
   colors: require("./images/1235.jpg"),
   ap_su: require("./images/18.jpg"),
+  appearl_home_page: {
+    three_images: [
+      require("./images/1.jpg"),
+      require("./images/2.jpg"),
+      require("./images/3.jpg"),
+    ],
+  },
 };
