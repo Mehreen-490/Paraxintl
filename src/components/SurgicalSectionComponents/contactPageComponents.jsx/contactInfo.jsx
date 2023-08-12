@@ -3,11 +3,11 @@ import React from "react";
 import images from "../../../assets/surgicalImages/images";
 const ContactInfo = () => {
   return (
-    <Box sx={{ width: "50%", py: 5 }}>
+    <Box sx={{ width: "50%", py: 1 }}>
       {/* Address Box */}
       <Box sx={{ display: "flex", pl: 4, width: "85%" }}>
         {/* Address PNG */}
-        <Box sx={{ pt: 3, pr: 2 }}>
+        <Box sx={{ pt: 1.5, pr: 2 }}>
           <Avatar
             src={images.address}
             sx={{ borderRadius: "0", width: "35px", height: "35px" }}
@@ -18,7 +18,7 @@ const ContactInfo = () => {
           <Typography
             sx={{
               fontSize: "22px",
-              lineHeight: "34px",
+              lineHeight: "24px",
               fontWeight: "600",
               fontFamily: "'Barlow Condensed', sans-serif",
             }}
@@ -27,12 +27,11 @@ const ContactInfo = () => {
           </Typography>
           <Typography
             sx={{
-              fontSize: "24px",
-              lineHeight: "34px",
-              fontWeight: "300",
+              fontSize: "17px",
+              lineHeight: "31px",
+              fontWeight: "500",
               fontFamily: "'Barlow Condensed', sans-serif",
-              pb: 2,
-              pt: 1,
+              pb: 1,
             }}
           >
             DASKA ROAD, PASRUR BYPASS, PAKKI KOTLI, SIALKOT-51310, PAKISTAN
@@ -54,7 +53,7 @@ const ContactInfo = () => {
       {/* Phone Box */}
       <Box sx={{ display: "flex", pl: 4, width: "85%" }}>
         {/* Phone PNG */}
-        <Box sx={{ pt: 3, pr: 2 }}>
+        <Box sx={{ pt: 1, pr: 2 }}>
           <Avatar
             src={images.phone}
             sx={{ borderRadius: "0", width: "33px", height: "33px" }}
@@ -65,7 +64,7 @@ const ContactInfo = () => {
           <Typography
             sx={{
               fontSize: "22px",
-              lineHeight: "34px",
+              lineHeight: "24px",
               fontWeight: "600",
               fontFamily: "'Barlow Condensed', sans-serif",
             }}
@@ -74,12 +73,11 @@ const ContactInfo = () => {
           </Typography>
           <Typography
             sx={{
-              fontSize: "24px",
-              lineHeight: "34px",
-              fontWeight: "300",
+              fontSize: "17px",
+              lineHeight: "31px",
+              fontWeight: "500",
               fontFamily: "'Barlow Condensed', sans-serif",
-              pb: 2,
-              pt: 1,
+              pb: 1,
             }}
           >
             +92 300 6175621
@@ -101,7 +99,7 @@ const ContactInfo = () => {
       {/* Email Box */}
       <Box sx={{ display: "flex", pl: 4, width: "85%" }}>
         {/* Email Png */}
-        <Box sx={{ pt: 3, pr: 2 }}>
+        <Box sx={{ pt: 1, pr: 2 }}>
           <Avatar
             src={images.mail}
             sx={{ borderRadius: "0", width: "33px", height: "33px" }}
@@ -112,7 +110,7 @@ const ContactInfo = () => {
           <Typography
             sx={{
               fontSize: "22px",
-              lineHeight: "34px",
+              lineHeight: "24px",
               fontWeight: "600",
               fontFamily: "'Barlow Condensed', sans-serif",
             }}
@@ -121,12 +119,11 @@ const ContactInfo = () => {
           </Typography>
           <Typography
             sx={{
-              fontSize: "24px",
-              lineHeight: "34px",
-              fontWeight: "300",
+              fontSize: "17px",
+              lineHeight: "31px",
+              fontWeight: "500",
               fontFamily: "'Barlow Condensed', sans-serif",
-              pb: 2,
-              pt: 1,
+              pb: 1,
             }}
           >
             sales@paraxintl.com
@@ -148,10 +145,10 @@ const ContactInfo = () => {
       {/* Website Box */}
       <Box sx={{ display: "flex", pl: 4, width: "85%" }}>
         {/* Website Png */}
-        <Box sx={{ pt: 3, pr: 2 }}>
+        <Box sx={{ pt: 1, pr: 2 }}>
           <Avatar
-            src={images.mail}
-            sx={{ borderRadius: "0", width: "33px", height: "33px" }}
+            src={images.link}
+            sx={{ borderRadius: "0", width: "30px", height: "30px" }}
           />
         </Box>
         {/* Website Address */}
@@ -159,7 +156,7 @@ const ContactInfo = () => {
           <Typography
             sx={{
               fontSize: "22px",
-              lineHeight: "34px",
+              lineHeight: "24px",
               fontWeight: "600",
               fontFamily: "'Barlow Condensed', sans-serif",
             }}
@@ -168,12 +165,11 @@ const ContactInfo = () => {
           </Typography>
           <Typography
             sx={{
-              fontSize: "24px",
-              lineHeight: "34px",
-              fontWeight: "300",
+              fontSize: "17px",
+              lineHeight: "31px",
+              fontWeight: "500",
               fontFamily: "'Barlow Condensed', sans-serif",
-              pb: 2,
-              pt: 1,
+              pb: 1,
             }}
           >
             www.paraxintl.com

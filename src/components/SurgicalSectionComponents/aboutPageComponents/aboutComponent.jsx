@@ -10,27 +10,63 @@ const AboutComponent = () => {
         backgroundImage:
           "linear-gradient(to bottom, #686d73, #a1a5aa, #bcbfc2, #61656b)",
         color: " #262626",
-        pr: 50,
-        pl: 30,
-        py: 10,
+        pr: {
+          xl: 16,
+          lg: 10,
+          md: 5,
+          sm: 2,
+          xs: 1,
+        },
+        pl: {
+          xl: 20,
+          lg: 5,
+          md: 5,
+          sm: 2,
+          xs: 1,
+        },
+        pt: 5,
+        pb: 10,
       }}
     >
-      <Box>
-        <Typography
+      <Box sx={{ px: 2 }}>
+        <Box
           sx={{
-            fontFamily: "'Roboto', sans-serif",
-            fontWeight: 600,
-            fontSize: "35px",
-            lineHeight: "35px",
-            py: 2,
+            display: "flex",
+            flexDirection: {
+              xl: "row",
+              lg: "column",
+              md: "column",
+              sm: "column",
+              xs: "column",
+            },
+            alignItems: "center",
+            justifyContent: "center",
+            px: 2,
           }}
         >
-          WELCOME TO
-        </Typography>
-
-        <Box sx={{ display: "flex" }}>
           {/* Parax International Typography & Desc Box */}
-          <Box sx={{ pr: 10 }}>
+          <Box
+            sx={{
+              pr: {
+                xl: 10,
+                lg: 5,
+                md: 2,
+                sm: 2,
+                xs: 1,
+              },
+            }}
+          >
+            <Typography
+              sx={{
+                fontFamily: "'Roboto', sans-serif",
+                fontWeight: 600,
+                fontSize: "35px",
+                lineHeight: "35px",
+                py: 2,
+              }}
+            >
+              WELCOME TO
+            </Typography>
             {/* Parax International Typography */}
             <Typography
               sx={{
@@ -45,7 +81,7 @@ const AboutComponent = () => {
             </Typography>
             {/* Parax International Desc */}
             <Typography
-              sx={{ fontWeight: 600, fontSize: "16px", lineHeight: "29px" }}
+              sx={{ fontWeight: 600, fontSize: "14px", lineHeight: "29px" }}
             >
               PARAX INTERNATIONAL is a brand for manufacturing quality
               instruments. An eminent name among Disposable & Reusable surgical
@@ -62,24 +98,40 @@ const AboutComponent = () => {
             </Typography>
           </Box>
           {/* Parax Labore Image Box */}
-          <Box>
+          <Box sx={{ px: 3 }}>
             {/* Parax Labore Image */}
 
             <Avatar
               src={images.labor}
-              sx={{ borderRadius: "0", width: "600px", height: "400px" }}
+              sx={{
+                borderRadius: "0",
+                width: {
+                  xl: "600px",
+                  lg: "100%",
+                  md: "100%",
+                  sm: "100%",
+                  xs: "100%",
+                },
+                height: {
+                  xl: "400px",
+                  lg: "300px",
+                  md: "200px",
+                  sm: "200px",
+                  xs: "200px",
+                },
+              }}
             />
           </Box>
         </Box>
       </Box>
       {/* Quality */}
-      <Box>
+      <Box sx={{ px: 2 }}>
         {/* Heading */}
         <Typography
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "20px",
+            fontSize: "16px",
             lineHeight: "29px",
             pt: 4,
           }}
@@ -91,9 +143,9 @@ const AboutComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 500,
-            fontSize: "20px",
+            fontSize: "16px",
             lineHeight: "29px",
-            pt: 2,
+            pt: 1,
           }}
         >
           The Quality Management System of PARAX INTERNATIONAL has been designed
@@ -103,13 +155,13 @@ const AboutComponent = () => {
         </Typography>
       </Box>
       {/* WHY CHOOSE US */}
-      <Box>
+      <Box sx={{ px: 2 }}>
         {/* Heading */}
         <Typography
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "20px",
+            fontSize: "16px",
             lineHeight: "29px",
             pt: 4,
           }}
@@ -121,9 +173,9 @@ const AboutComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 500,
-            fontSize: "20px",
+            fontSize: "16px",
             lineHeight: "29px",
-            pt: 2,
+            pt: 1,
           }}
         >
           PARAX INTERNATIONAL greatest strength is his Top management which is
@@ -133,13 +185,13 @@ const AboutComponent = () => {
         </Typography>
       </Box>
       {/* VISION AND MISSION STATEMENT */}
-      <Box>
+      <Box sx={{ px: 2 }}>
         {/* Heading */}
         <Typography
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "20px",
+            fontSize: "16px",
             lineHeight: "29px",
             pt: 4,
           }}
@@ -151,9 +203,9 @@ const AboutComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 500,
-            fontSize: "20px",
+            fontSize: "16px",
             lineHeight: "29px",
-            pt: 2,
+            pt: 1,
           }}
         >
           Our mission is to provide high quality instruments at competitive
@@ -162,14 +214,14 @@ const AboutComponent = () => {
           surgeons choice for safe and secure instruments manufacture.
         </Typography>
       </Box>
-      {/* Quality */}
-      <Box>
+      {/* OUR COMMITMENT */}
+      <Box sx={{ px: 2 }}>
         {/* Heading */}
         <Typography
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "20px",
+            fontSize: "16px",
             lineHeight: "29px",
             pt: 4,
           }}
@@ -181,9 +233,9 @@ const AboutComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 500,
-            fontSize: "20px",
+            fontSize: "16px",
             lineHeight: "29px",
-            pt: 2,
+            pt: 1,
           }}
         >
           We diversify our business scope by developing new manufacturing lines

@@ -6,31 +6,60 @@ function StepsDetail() {
     <Box
       sx={{
         width: "100%",
-        pl: 24,
-        pr: 30,
+        pl: {
+          xl: 24,
+          lg: 4,
+          md: 4,
+          sm: 3,
+          xs: 2,
+        },
+        pr: {
+          xl: 30,
+          lg: 4,
+          md: 3,
+          sm: 1,
+          xs: 0,
+        },
         py: 10,
         color: "#192d34",
         backgroundImage:
           "linear-gradient(to bottom, #52bffa, #bde7fd, #b5e4fd, #9cdafc)",
+        textAlign: "justify",
       }}
     >
+      {/* <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+          flexWrap: "wrap",
+          px: {
+            sm: 0,
+            xs: 7,
+          },
+          bgcolor: "red",
+        }}
+      >
+       
+      </Box> */}
       {/* Heading Typography */}
       <Typography
         sx={{
           fontFamily: "'Barlow Condensed', sans-serif",
           fontWeight: 700,
-          fontSize: "70px",
-          lineHeight: "65px",
+          fontSize: "55px",
+          lineHeight: "55px",
         }}
       >
         HOW TO ORDER
       </Typography>
+
       {/* Heading Desc */}
       <Typography
         sx={{
           fontFamily: "'Barlow Condensed', sans-serif",
           fontWeight: 400,
-          fontSize: "26px",
+          fontSize: "24px",
           lineHeight: "43px",
           letterSpacing: "0.6px",
           width: "90%",
@@ -48,7 +77,7 @@ function StepsDetail() {
         sx={{
           fontFamily: "'Barlow Condensed', sans-serif",
           fontWeight: 500,
-          fontSize: "29px",
+          fontSize: "25px",
           lineHeight: "25px",
           fontStyle: "italic",
         }}
@@ -66,9 +95,8 @@ function StepsDetail() {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 700,
-            fontSize: "26px",
+            fontSize: "25px",
             lineHeight: "25px",
-            // pb: 2.5,
           }}
         >
           STEP 1:
@@ -80,7 +108,7 @@ function StepsDetail() {
             sx={{
               fontFamily: "'Barlow Condensed', sans-serif",
               fontWeight: 400,
-              fontSize: "26px",
+              fontSize: "24px",
               lineHeight: "43px",
               letterSpacing: "0.6px",
               width: "90%",
@@ -104,7 +132,7 @@ function StepsDetail() {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 700,
-            fontSize: "26px",
+            fontSize: "25px",
             lineHeight: "25px",
             pb: 2.5,
           }}
@@ -121,9 +149,14 @@ function StepsDetail() {
               sx={{
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 400,
-                fontSize: "26px",
+                fontSize: "24px",
                 lineHeight: "43px",
-                letterSpacing: "0.6px",
+                letterSpacing: {
+                  lg: "0.6px",
+                  md: "0.4px",
+                  sm: "0.3px",
+                  xs: "0.1px",
+                },
                 width: "90%",
               }}
             >
@@ -139,35 +172,32 @@ function StepsDetail() {
               sx={{
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 400,
-                fontSize: "26px",
+                fontSize: "24px",
                 lineHeight: "43px",
-                letterSpacing: "0.6px",
+                letterSpacing: {
+                  lg: "0.6px",
+                  md: "0.4px",
+                  sm: "0.3px",
+                  xs: "0.1px",
+                },
                 width: "90%",
               }}
             >
               {" "}
-              1. Credit/Debit card (visa/master/American){" "}
+              1. Credit/Debit card
             </Typography>
             <Typography
               sx={{
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 400,
-                fontSize: "26px",
+                fontSize: "24px",
                 lineHeight: "43px",
-                letterSpacing: "0.6px",
-                width: "90%",
-              }}
-            >
-              {" "}
-              1. Credit/Debit card (visa/master/American){" "}
-            </Typography>
-            <Typography
-              sx={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 400,
-                fontSize: "26px",
-                lineHeight: "43px",
-                letterSpacing: "0.6px",
+                letterSpacing: {
+                  lg: "0.6px",
+                  md: "0.4px",
+                  sm: "0.3px",
+                  xs: "0.1px",
+                },
                 width: "90%",
               }}
             >
@@ -177,9 +207,14 @@ function StepsDetail() {
               sx={{
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 400,
-                fontSize: "26px",
+                fontSize: "24px",
                 lineHeight: "43px",
-                letterSpacing: "0.6px",
+                letterSpacing: {
+                  lg: "0.6px",
+                  md: "0.4px",
+                  sm: "0.3px",
+                  xs: "0.1px",
+                },
                 width: "90%",
               }}
             >
@@ -190,9 +225,14 @@ function StepsDetail() {
               sx={{
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 400,
-                fontSize: "26px",
+                fontSize: "24px",
                 lineHeight: "43px",
-                letterSpacing: "0.6px",
+                letterSpacing: {
+                  lg: "0.6px",
+                  md: "0.4px",
+                  sm: "0.3px",
+                  xs: "0.1px",
+                },
                 width: "90%",
               }}
             >
@@ -213,7 +253,7 @@ function StepsDetail() {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 700,
-            fontSize: "26px",
+            fontSize: "25px",
             lineHeight: "25px",
             pb: 2.5,
           }}
@@ -230,9 +270,14 @@ function StepsDetail() {
               sx={{
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 400,
-                fontSize: "26px",
+                fontSize: "24px",
                 lineHeight: "43px",
-                letterSpacing: "0.6px",
+                letterSpacing: {
+                  lg: "0.6px",
+                  md: "0.4px",
+                  sm: "0.3px",
+                  xs: "0.1px",
+                },
                 width: "90%",
               }}
             >
@@ -251,9 +296,14 @@ function StepsDetail() {
               sx={{
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 400,
-                fontSize: "26px",
+                fontSize: "24px",
                 lineHeight: "43px",
-                letterSpacing: "0.6px",
+                letterSpacing: {
+                  lg: "0.6px",
+                  md: "0.4px",
+                  sm: "0.3px",
+                  xs: "0.1px",
+                },
                 width: "90%",
                 py: 1,
               }}
@@ -267,9 +317,14 @@ function StepsDetail() {
               sx={{
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 400,
-                fontSize: "26px",
+                fontSize: "24px",
                 lineHeight: "43px",
-                letterSpacing: "0.6px",
+                letterSpacing: {
+                  lg: "0.6px",
+                  md: "0.4px",
+                  sm: "0.3px",
+                  xs: "0.1px",
+                },
                 width: "90%",
                 py: 1,
               }}
@@ -284,9 +339,14 @@ function StepsDetail() {
               sx={{
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 400,
-                fontSize: "26px",
+                fontSize: "24px",
                 lineHeight: "43px",
-                letterSpacing: "0.6px",
+                letterSpacing: {
+                  lg: "0.6px",
+                  md: "0.4px",
+                  sm: "0.3px",
+                  xs: "0.1px",
+                },
                 width: "90%",
                 py: 1,
               }}
@@ -299,9 +359,14 @@ function StepsDetail() {
               sx={{
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 400,
-                fontSize: "26px",
+                fontSize: "24px",
                 lineHeight: "43px",
-                letterSpacing: "0.6px",
+                letterSpacing: {
+                  lg: "0.6px",
+                  md: "0.4px",
+                  sm: "0.3px",
+                  xs: "0.1px",
+                },
                 width: "90%",
                 py: 1,
               }}

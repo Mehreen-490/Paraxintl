@@ -3,6 +3,9 @@ import { Stack } from "@mui/system";
 import React from "react";
 import EastIcon from "@mui/icons-material/East";
 import images from "../../assets/images";
+import { Box, Button, Typography } from "@mui/material";
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 function CategoriesSection() {
   return (
@@ -19,7 +22,7 @@ function CategoriesSection() {
         <Typography
           variant="h1"
           sx={{
-            fontWeight: "500",
+            fontWeight: "400",
             fontSize: "35px",
             lineHeight: "20px",
             fontFamily: "'Oswald', sans-serif",
@@ -34,8 +37,8 @@ function CategoriesSection() {
         <Typography
           sx={{
             fontWeight: "400",
-            fontSize: "14px",
-            pt: 8.5,
+            fontSize: "10px",
+            pt: 12.5,
             color: " #192d34",
           }}
         >
@@ -75,10 +78,11 @@ function CategoriesSection() {
           <Typography
             sx={{
               fontFamily: "'Oswald', sans-serif",
-              fontSize: "24px",
-              lineHeight: "28px",
+              fontSize: "22px",
+              lineHeight: "43px",
               color: "#4b859b",
               letterSpacing: "1px",
+              textAlign: "center",
             }}
           >
             Parax International is specialized in Casual wear, Outerwear, and
@@ -86,7 +90,25 @@ function CategoriesSection() {
             of high-quality Apparels. We are an established supplier of
             customized Apparel backed by technical expertise and experience.
           </Typography>
-        </Box>
+          <Button
+            component={NavLink}
+            to="/product"
+            variant="outlined"
+            sx={{
+              color: "black",
+              border: "2px solid black",
+              borderRadius: "0",
+              width: "150px",
+              "&:hover": {
+                bgcolor: "#000000",
+                color: "white",
+                border: "0",
+              },
+            }}
+          >
+            Product Page
+          </Button>
+        </Box>{" "}
       </Box>
       <Stack direction="row" justifyContent="space-between" pb={3}>
         <Typography sx={{ fontWeight: "bold" }}>

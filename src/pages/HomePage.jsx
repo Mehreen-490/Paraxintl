@@ -14,6 +14,7 @@ function HomePage() {
           width: "100vw",
           height: "100vh",
           overflow: "hidden",
+          objectFit: "contain",
         }}
       >
         <Box
@@ -40,23 +41,26 @@ function HomePage() {
             <Typography
               variant="h1"
               sx={{
-                color: "white",
-                fontWeight: "400",
                 pb: 1,
-                letterSpacing: "1px",
                 pl: "2px",
+                color: "white",
+                fontWeight: 500,
+                letterSpacing: "2px",
+                fontSize: "85px",
+                lineHeight: "55px",
               }}
             >
               PARAX
             </Typography>
             <Typography
               sx={{
-                color: "white",
-                fontSize: "17px",
-                lineHeight: "27px",
+                pt: "4px",
                 pl: "2px",
+                color: "white",
                 letterSpacing: "2px",
-                fontWeight: "500",
+                fontWeight: 500,
+                fontSize: "14px",
+                lineHeight: "25px",
               }}
             >
               {" "}

@@ -6,7 +6,7 @@ const ContactForm = () => {
     <Box
       sx={{
         width: "50%",
-        py: 5,
+        py: 1,
         px: 5,
         borderRadius: "0",
         "& > :not(style)": {
@@ -25,6 +25,7 @@ const ContactForm = () => {
         sx={{
           border: "1px solid gray",
           fontFamily: "'Barlow Condensed', sans-serif",
+          borderRadius: "0",
         }}
       />
       <TextField
@@ -34,6 +35,7 @@ const ContactForm = () => {
         sx={{
           border: "1px solid gray",
           fontFamily: "'Barlow Condensed', sans-serif",
+          borderRadius: "0",
         }}
       />
       <TextField
@@ -43,30 +45,31 @@ const ContactForm = () => {
         sx={{
           border: "1px solid gray",
           fontFamily: "'Barlow Condensed', sans-serif",
+          borderRadius: "0",
         }}
       />
       <Textarea
         placeholder="Message…"
-        minRows={5}
+        minRows={2}
         sx={{
           bgcolor: "inherit",
           border: "1px solid gray",
           borderRadius: "0",
           fontFamily: "'Barlow Condensed', sans-serif",
           fontWeight: 400,
-          fontSize: "23px",
-          lineHeight: "25px",
+          fontSize: "16px",
+          lineHeight: "45px",
         }}
       />
       <Button
         sx={{
           bgcolor: "black",
           color: "#686d73",
-          py: 2,
+          py: 1.5,
           fontFamily: "'Barlow Condensed', sans-serif",
-          fontWeight: 500,
-          fontSize: "25px",
-          lineHeight: "25px",
+          fontWeight: 600,
+          fontSize: "16px",
+          lineHeight: "16px",
         }}
       >
         Submit

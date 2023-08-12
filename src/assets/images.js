@@ -29,4 +29,7 @@ export default {
       require("./images/3.jpg"),
     ],
   },
+  front: require("./images/19.jpg"),
+  back: require("./images/20.jpg"),
+  footer: require("./images/21.jpg"),
 };

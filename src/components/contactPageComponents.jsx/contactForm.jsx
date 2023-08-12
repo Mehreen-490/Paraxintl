@@ -5,9 +5,7 @@ const ContactForm = () => {
   return (
     <Box
       sx={{
-        width: "50%",
-        py: 5,
-        px: 5,
+        width: "100%",
         borderRadius: "0",
         "& > :not(style)": {
           m: 1,
@@ -54,7 +52,7 @@ const ContactForm = () => {
           borderRadius: "0",
           fontFamily: "'Barlow Condensed', sans-serif",
           fontWeight: 400,
-          fontSize: "23px",
+          fontSize: "20px",
           lineHeight: "25px",
         }}
       />
@@ -62,10 +60,10 @@ const ContactForm = () => {
         sx={{
           bgcolor: "#192d34",
           color: "#bde7fd",
-          py: 2,
+          py: 1,
           fontFamily: "'Barlow Condensed', sans-serif",
           fontWeight: 500,
-          fontSize: "25px",
+          fontSize: "16px",
           lineHeight: "25px",
         }}
       >

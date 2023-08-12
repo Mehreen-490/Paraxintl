@@ -5,8 +5,14 @@ const ManufacturingComponent = () => {
   return (
     <Box
       sx={{
-        px: 30,
-        pt: 8,
+        px: {
+          xl: 30,
+          ld: 10,
+          md: 5,
+          sm: 2,
+          xs: 1,
+        },
+        // pt: 8,
         pb: 10,
         backgroundImage:
           "linear-gradient(to bottom, #686d73, #a1a5aa,#afb2b6,#c9cccf, #bcbfc2, #61656b)",
@@ -24,6 +30,7 @@ const ManufacturingComponent = () => {
           lineHeight: "35px",
           py: 2,
           pt: 5,
+          textAlign: "center",
         }}
       >
         MANUFACTURING PROCESS
@@ -48,7 +55,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -58,7 +65,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -77,7 +84,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -87,7 +94,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -106,7 +113,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -116,7 +123,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -136,7 +143,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -146,7 +153,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -165,7 +172,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -175,7 +182,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -196,7 +203,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -206,7 +213,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -226,7 +233,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -236,7 +243,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -256,7 +263,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -266,7 +273,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -286,7 +293,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -296,7 +303,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -315,7 +322,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -325,7 +332,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -346,7 +353,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -356,7 +363,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -374,7 +381,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -384,7 +391,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -404,7 +411,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -414,7 +421,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -433,7 +440,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -443,7 +450,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -463,7 +470,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -473,7 +480,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -490,7 +497,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -500,7 +507,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
@@ -519,7 +526,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
-            fontSize: "25px",
+            fontSize: "22px",
             lineHeight: "22px",
           }}
         >
@@ -529,7 +536,7 @@ const ManufacturingComponent = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
+            fontSize: "14px",
             lineHeight: "25px",
             py: 2,
           }}
