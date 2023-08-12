@@ -3,8 +3,7 @@ import { Stack } from "@mui/system";
 import React from "react";
 import EastIcon from "@mui/icons-material/East";
 import images from "../../assets/images";
-import { Button, Typography } from "@mui/material";
-import React from "react";
+import { Button } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 function CategoriesSection() {
