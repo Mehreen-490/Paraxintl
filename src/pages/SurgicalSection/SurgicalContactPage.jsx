@@ -12,9 +12,9 @@ const SurgicalContactPage = () => {
       <Box
         sx={{
           width: "100%",
-          pl: 24,
-          pr: 30,
-          py: 10,
+          // pl: 24,
+          // pr: 30,
+          py: 3,
           color: "black",
           backgroundImage:
             "linear-gradient(to bottom, #686d73, #a1a5aa, #bcbfc2, #61656b)",
@@ -27,8 +27,8 @@ const SurgicalContactPage = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: "700",
-            fontSize: "65px",
-            lineHeight: "55px",
+            fontSize: "50px",
+            lineHeight: "50px",
             color: "black",
             pb: 3,
             letterSpacing: "1px",

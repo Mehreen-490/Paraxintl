@@ -9,6 +9,7 @@ import SurgicalManufacturingPage from "./pages/SurgicalSection/SurgicalManufactu
 import ApparelOrderPage from "./pages/ApparelSection/ApparelOrderPage";
 import ApparelAboutPage from "./pages/ApparelSection/ApparelAboutPage";
 import ApparelContactPage from "./pages/ApparelSection/ApparelContactPage";
+import ApparelProductPage from "./pages/ApparelSection/ApparelProductPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/how-to-order" element={<ApparelOrderPage />} />
         <Route path="/about-us" element={<ApparelAboutPage />} />
         <Route path="/contact-us" element={<ApparelContactPage />} />
+        <Route path="/product" element={<ApparelProductPage />} />
         {/* Surgical Section */}
         <Route path="/surgical/about-us" element={<SurgicalAboutPage />} />
         <Route path="/surgical/contact-us" element={<SurgicalContactPage />} />

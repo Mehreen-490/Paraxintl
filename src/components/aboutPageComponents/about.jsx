@@ -6,10 +6,21 @@ const About = () => {
     <Box
       sx={{
         width: "100%",
-        pl: 24,
-        pr: 30,
-        pt: 10,
-        pb: 15,
+        pl: {
+          xl: 24,
+          lg: 20,
+          md: 16,
+          sm: 5,
+          xs: 2,
+        },
+        pr: {
+          xl: 30,
+          lg: 20,
+          md: 16,
+          sm: 5,
+          xs: 2,
+        },
+        py: 10,
         color: "#192d34",
         backgroundImage:
           "linear-gradient(to bottom, #52bffa, #bde7fd, #b5e4fd, #9cdafc)",
@@ -17,27 +28,39 @@ const About = () => {
       }}
     >
       {/* Parax International Heading */}
-      <Typography
-        sx={{
-          fontFamily: "'Barlow Condensed', sans-serif",
-          fontWeight: 700,
-          fontSize: "55px",
-          lineHeight: "55px",
-          color: "#192d34",
-          letterSpacing: "1px",
-        }}
+      <Box
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
       >
-        PARAX INTERNATIONAL
-      </Typography>
+        <Typography
+          sx={{
+            fontFamily: "'Barlow Condensed', sans-serif",
+            fontWeight: 700,
+            fontSize: {
+              xs: "35px",
+              sm: "55px",
+            },
+            lineHeight: "55px",
+            color: "#192d34",
+            letterSpacing: "1px",
+            textAlign: "center",
+          }}
+        >
+          PARAX INTERNATIONAL
+        </Typography>
+      </Box>
       {/* Parax Desc */}
       <Typography
         sx={{
           fontFamily: "'Barlow Condensed', sans-serif",
           fontWeight: 400,
-          fontSize: "26px",
+          fontSize: "24px",
           lineHeight: "43px",
           letterSpacing: "0.6px",
-          width: "90%",
+          width: {
+            xl: "90%",
+            lg: "90%",
+            md: "100%",
+          },
           pt: 3,
           pb: 7,
         }}
@@ -52,7 +75,7 @@ const About = () => {
         sx={{
           fontFamily: "'Barlow Condensed', sans-serif",
           fontWeight: 700,
-          fontSize: "40px",
+          fontSize: "30px",
           lineHeight: "30px",
           letterSpacing: "0.6px",
         }}
@@ -65,10 +88,14 @@ const About = () => {
         sx={{
           fontFamily: "'Barlow Condensed', sans-serif",
           fontWeight: 400,
-          fontSize: "26px",
+          fontSize: "24px",
           lineHeight: "43px",
           letterSpacing: "0.6px",
-          width: "90%",
+          width: {
+            xl: "90%",
+            lg: "90%",
+            md: "100%",
+          },
           pt: 3,
           pb: 7,
         }}
@@ -84,7 +111,7 @@ const About = () => {
         sx={{
           fontFamily: "'Barlow Condensed', sans-serif",
           fontWeight: 700,
-          fontSize: "40px",
+          fontSize: "30px",
           lineHeight: "30px",
           letterSpacing: "0.6px",
         }}
@@ -98,7 +125,7 @@ const About = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 400,
-            fontSize: "26px",
+            fontSize: "24px",
             lineHeight: "43px",
             letterSpacing: "0.6px",
             pt: 3,
@@ -114,7 +141,7 @@ const About = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 400,
-            fontSize: "26px",
+            fontSize: "24px",
             lineHeight: "43px",
             letterSpacing: "0.6px",
           }}
@@ -126,7 +153,7 @@ const About = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 400,
-            fontSize: "26px",
+            fontSize: "24px",
             lineHeight: "43px",
             letterSpacing: "0.6px",
           }}
@@ -138,7 +165,7 @@ const About = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 400,
-            fontSize: "26px",
+            fontSize: "24px",
             lineHeight: "43px",
             letterSpacing: "0.6px",
           }}
@@ -149,7 +176,7 @@ const About = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 400,
-            fontSize: "26px",
+            fontSize: "24px",
             lineHeight: "43px",
             letterSpacing: "0.6px",
           }}
@@ -161,7 +188,7 @@ const About = () => {
           sx={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 400,
-            fontSize: "26px",
+            fontSize: "24px",
             lineHeight: "43px",
             letterSpacing: "0.6px",
           }}

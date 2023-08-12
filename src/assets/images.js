@@ -22,4 +22,7 @@ export default {
   color: require("./images/1234.jpg"),
   colors: require("./images/1235.jpg"),
   ap_su: require("./images/18.jpg"),
+  front: require("./images/19.jpg"),
+  back: require("./images/20.jpg"),
+  footer: require("./images/21.jpg"),
 };

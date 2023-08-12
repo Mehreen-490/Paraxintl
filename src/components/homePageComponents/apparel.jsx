@@ -30,11 +30,11 @@ function Apparel() {
         <Typography
           variant="h2"
           sx={{
-            fontWeight: "400",
+            fontWeight: 400,
             fontSize: "40px",
             lineHeight: "40px",
             color: "white",
-            pb: "1rem",
+            pb: "0.5rem",
             letterSpacing: "1.5px",
           }}
         >
@@ -45,7 +45,7 @@ function Apparel() {
           variant="p"
           sx={{
             fontWeight: "500",
-            fontSize: "17px",
+            fontSize: "15px",
             lineHeight: "27px",
             color: "white",
             textAlign: "center",
@@ -71,8 +71,8 @@ function Apparel() {
           sx={{
             border: "2px solid white",
             borderRadius: "0",
-            px: 3,
-            py: 2.5,
+            px: 2,
+            py: 2,
             "&:hover": {
               bgcolor: "#000000",
               color: "white",
@@ -84,7 +84,7 @@ function Apparel() {
             variant="h2"
             sx={{
               fontWeight: "500",
-              fontSize: "17px",
+              fontSize: "15px",
               lineHeight: "15px",
               color: "white",
               letterSpacing: "2px",

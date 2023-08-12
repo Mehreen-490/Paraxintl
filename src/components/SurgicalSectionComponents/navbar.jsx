@@ -10,11 +10,17 @@ const Navbar = () => {
       <Box
         sx={{
           width: "100%",
-          height: "50px",
+          height: "35px",
           bgcolor: "black",
           display: "flex",
           alignItems: "center",
-          pl: 8,
+          pl: {
+            xl: 8,
+            lg: 2,
+            md: 2,
+            sm: 1,
+            xs: 1,
+          },
         }}
       >
         <Avatar
@@ -23,17 +29,34 @@ const Navbar = () => {
         />
         <Avatar
           src={images.canada}
-          sx={{ borderRadius: "0", mx: 1, width: "20px", height: "25px" }}
+          sx={{ borderRadius: "0", mx: 0.5, width: "20px", height: "25px" }}
         />
         <Avatar
           src={images.france}
-          sx={{ borderRadius: "0", mx: 1, width: "20px", height: "25px" }}
+          sx={{ borderRadius: "0", mx: 0.5, width: "20px", height: "25px" }}
         />
         <Avatar
           src={images.spain}
-          sx={{ borderRadius: "0", mx: 1, width: "20px", height: "25px" }}
+          sx={{ borderRadius: "0", mx: 0.5, width: "20px", height: "25px" }}
         />
-        <Typography sx={{ ml: "auto", color: "#686d73", mr: 8 }}>
+        <Typography
+          sx={{
+            ml: "auto",
+            color: "#686d73",
+            mr: {
+              xl: 8,
+              lg: 2,
+              md: 2,
+              sm: 2,
+              xs: 1,
+            },
+            fontFamily: "'Barlow Condensed', sans-serif",
+            fontWeight: 500,
+            fontSize: "15px",
+            lineHeight: "27px",
+            letterSpacing: "0.3px",
+          }}
+        >
           info@paraxintl.com
         </Typography>
       </Box>
@@ -41,7 +64,7 @@ const Navbar = () => {
       <Box
         sx={{
           width: "100%",
-          height: "120px",
+          height: "90px",
           bgcolor: "#686d73",
           color: "black",
           display: "flex",
@@ -52,7 +75,13 @@ const Navbar = () => {
         <Box
           sx={{
             display: "flex",
-            pl: 100,
+            pl: {
+              xl: 78,
+              lg: 2,
+              md: 2,
+              sm: 2,
+              xs: 1,
+            },
           }}
         >
           {/* Parax Typography */}
@@ -60,7 +89,13 @@ const Navbar = () => {
             variant="h1"
             sx={{
               fontWeight: "500",
-              fontSize: "55px",
+              fontSize: {
+                xl: "55px",
+                lg: "55px",
+                md: "55px",
+                sm: "35px",
+                xs: "35px",
+              },
               lineHeight: "20px",
               fontFamily: "'Oswald', sans-serif",
               letterSpacing: "5px",
@@ -84,12 +119,99 @@ const Navbar = () => {
             display: "flex",
             alignItems: "center",
             marginLeft: "auto",
-            mr: "20px",
+            mr: {
+              xl: "20px",
+              lg: "20px",
+              md: "20px",
+              sm: "5px",
+              xs: "5px",
+            },
           }}
         >
-          <Avatar src={images.facebook} sx={{ borderRadius: "0", mx: 3 }} />
-          <Avatar src={images.insta} sx={{ borderRadius: "0", mx: 3 }} />
-          <Avatar src={images.twitter} sx={{ borderRadius: "0", mx: 3 }} />
+          <Avatar
+            src={images.facebook}
+            sx={{
+              borderRadius: "0",
+              mx: 3,
+              width: {
+                xl: "25px",
+                lg: "25px",
+                md: "25px",
+                sm: 0,
+                xs: 0,
+              },
+              height: {
+                xl: "25px",
+                lg: "25px",
+                md: "25px",
+                sm: 0,
+                xs: 0,
+              },
+              display: {
+                xl: "block",
+                lg: "block",
+                md: "block",
+                sm: "none",
+                xs: "none",
+              },
+            }}
+          />
+          <Avatar
+            src={images.insta}
+            sx={{
+              borderRadius: "0",
+              mx: 3,
+              width: {
+                xl: "25px",
+                lg: "25px",
+                md: "25px",
+                sm: 0,
+                xs: 0,
+              },
+              height: {
+                xl: "25px",
+                lg: "25px",
+                md: "25px",
+                sm: 0,
+                xs: 0,
+              },
+              display: {
+                xl: "block",
+                lg: "block",
+                md: "block",
+                sm: "none",
+                xs: "none",
+              },
+            }}
+          />
+          <Avatar
+            src={images.twitter}
+            sx={{
+              borderRadius: "0",
+              mx: 3,
+              width: {
+                xl: "25px",
+                lg: "25px",
+                md: "25px",
+                sm: 0,
+                xs: 0,
+              },
+              height: {
+                xl: "25px",
+                lg: "25px",
+                md: "25px",
+                sm: 0,
+                xs: 0,
+              },
+              display: {
+                xl: "block",
+                lg: "block",
+                md: "block",
+                sm: "none",
+                xs: "none",
+              },
+            }}
+          />
         </Box>
       </Box>
       {/* Divider */}
@@ -103,20 +225,32 @@ const Navbar = () => {
       {/* Nav Routes */}
       <Box
         sx={{
-          width: "100%",
-          height: "80px",
+          width: {
+            xl: "100%",
+            lg: "100%",
+            md: "100%",
+            sm: 0,
+            xs: 0,
+          },
           bgcolor: "#686d73",
           color: "black",
-          display: "flex",
+          display: {
+            xl: "flex",
+            lg: "flex",
+            md: "flex",
+            sm: "none",
+            xs: "none",
+          },
           alignItems: "center",
           justifyContent: "center",
+          py: 3,
         }}
       >
         <Typography
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 300,
-            fontSize: "22px",
+            fontSize: "18px",
             lineHeight: "20px",
             pr: 2.5,
             cursor: "pointer",
@@ -131,7 +265,7 @@ const Navbar = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 300,
-            fontSize: "22px",
+            fontSize: "18px",
             lineHeight: "20px",
             px: 2.5,
             cursor: "pointer",
@@ -148,7 +282,7 @@ const Navbar = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 300,
-            fontSize: "22px",
+            fontSize: "18px",
             lineHeight: "20px",
             px: 2,
             cursor: "pointer",
@@ -167,7 +301,7 @@ const Navbar = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 300,
-            fontSize: "22px",
+            fontSize: "18px",
             lineHeight: "20px",
             px: 2.5,
             textDecoration: "none",
@@ -186,7 +320,7 @@ const Navbar = () => {
           sx={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 300,
-            fontSize: "22px",
+            fontSize: "18px",
             lineHeight: "20px",
             px: 3,
             cursor: "pointer",
