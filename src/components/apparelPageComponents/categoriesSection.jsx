@@ -3,7 +3,7 @@ import { Stack } from "@mui/system";
 import React from "react";
 import EastIcon from "@mui/icons-material/East";
 import images from "../../assets/images";
-import { Box, Button, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import React from "react";
 import { NavLink } from "react-router-dom";
 
