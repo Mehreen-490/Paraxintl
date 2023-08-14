@@ -122,9 +122,10 @@ function CategoriesSection() {
 
       {/* three images */}
       <Stack direction="row" justifyContent="space-between" mb={4}>
-        {images.appearl_home_page.three_images.map((image) => {
+        {images.appearl_home_page.three_images.map((image, i) => {
           return (
             <Paper
+              key={i}
               elevation={0}
               sx={{
                 width: "32%",

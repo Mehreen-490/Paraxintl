@@ -32,7 +32,7 @@ const MainSlider = () => {
       }}
     >
       {images.map((url, i) => (
-        <Item imageUrl={url} />
+        <Item key={i} imageUrl={url} />
       ))}
     </Carousel>
   );

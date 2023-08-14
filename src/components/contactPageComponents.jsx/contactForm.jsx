@@ -1,5 +1,4 @@
-import { Box, TextField } from "@mui/material";
-import Textarea from "@mui/joy/Textarea";
+import { Box, TextField, TextareaAutosize } from "@mui/material";
 import { Button } from "@mui/material";
 const ContactForm = () => {
   return (
@@ -43,7 +42,7 @@ const ContactForm = () => {
           fontFamily: "'Barlow Condensed', sans-serif",
         }}
       />
-      <Textarea
+      <TextareaAutosize
         placeholder="Message…"
         minRows={5}
         sx={{
@@ -54,6 +53,7 @@ const ContactForm = () => {
           fontWeight: 400,
           fontSize: "20px",
           lineHeight: "25px",
+          width: "100%", // Added width to match the other fields
         }}
       />
       <Button

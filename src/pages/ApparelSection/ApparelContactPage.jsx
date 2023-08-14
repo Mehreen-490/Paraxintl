@@ -1,13 +1,9 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-// import Navbar from "../components/navbar";
-// import Footer from "../components/footer";
 import ContactForm from "../../components/contactPageComponents.jsx/contactForm";
 import ContactInfo from "../../components/contactPageComponents.jsx/contactInfo";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
-// import ContactInfo from "../components/contactPageComponents.jsx/contactInfo";
-// import ContactForm from "../components/contactPageComponents.jsx/contactForm";
 const ContactPage = () => {
   return (
     <Box>
