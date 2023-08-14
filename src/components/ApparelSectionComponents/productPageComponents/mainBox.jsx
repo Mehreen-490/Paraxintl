@@ -1,16 +1,23 @@
 import {
   Autocomplete,
-  Avatar,
   Box,
-  Button,
   TextField,
   Typography,
+  Grid,
+  Pagination,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GridViewIcon from "@mui/icons-material/GridView";
 import ListIcon from "@mui/icons-material/List";
-import images from "../../../assets/images";
+import Product from "./product";
+import { Stack } from "@mui/system";
+
+function getPaginatedItems(items, ItemsPerPage, pageNumber) {
+  return items.splice((pageNumber - 1) * ItemsPerPage, ItemsPerPage);
+}
+
 const MainBox = () => {
+  // sorting options
   const sorting = [
     "Default Sorting",
     "Sort By Popularity",
@@ -18,15 +25,846 @@ const MainBox = () => {
     "Sort By Price: Low To High",
     "Sort By Price: High To Low",
   ];
-  const [hovered, setHovered] = useState(false);
 
-  const handleMouseEnter = () => {
-    setHovered(true);
+  // pagination per page options
+  const paginationPerPageOptions = ["4", "12", "24", "ALL"];
+
+  // all products
+  const [products, setProducts] = useState([]);
+
+  // current page
+  const [page, setPage] = useState(1);
+
+  // selected items per page
+  const [itemsPerPage, setItemsPerPage] = useState(4);
+
+  // viewType (grid or list)
+  const [viewType, SetViewType] = useState("gridView");
+
+  const handleItemsPerPage = (event, newValue) => {
+    setPage(1);
+    setItemsPerPage(newValue);
   };
 
-  const handleMouseLeave = () => {
-    setHovered(false);
+  const handleViewChange = (vType) => {
+    SetViewType(vType);
   };
+
+  const pageChangeHandler = (event, pageNumber = 1) => {
+    setPage(pageNumber);
+  };
+
+  const paginatedProducts =
+    itemsPerPage !== "ALL"
+      ? getPaginatedItems(products.slice(0), itemsPerPage, page)
+      : products;
+
+  useEffect(() => {
+    const apiProducts = [
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-3.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-3.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Summer New Casual Print Short Sleeve All Over Print",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-3.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-3.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Summer New Casual Print Short Sleeve All Over Print",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-3.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-3.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-3.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-3.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Summer New Casual Print Short Sleeve All Over Print",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-5.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-5.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Button Up Short Sleeves Tie Dye Shirts",
+      },
+      {
+        fontImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/1-3.jpg",
+        backImage:
+          "https://apparel.paraxintl.com/wp-content/uploads/2022/10/2-3.jpg",
+        categories: ["Casual Shirts", "Casual Wear"],
+        title: "Custom Summer New Casual Print Short Sleeve All Over Print",
+      },
+    ];
+    setProducts(apiProducts);
+  }, []);
+
   return (
     <Box sx={{ py: 4, width: "100%", px: 2, pb: 10 }}>
       {/* Top Bar */}
@@ -44,25 +882,36 @@ const MainBox = () => {
           {/* Grid & List View Icons */}
           <Box sx={{ display: "flex", alignItems: "center", py: 1 }}>
             <GridViewIcon
+              onClick={() => handleViewChange("gridView")}
               sx={{
-                border: "1px solid #6AA3C2",
+                border: viewType === "gridView" ? "2px solid #6AA3C2" : "",
                 width: "37px",
                 height: "37px",
                 p: "5px",
                 borderRadius: "2px",
+                cursor: "pointer",
+                "&:hover": {
+                  border: "2px solid #6AA3C2",
+                },
               }}
             />
             <ListIcon
+              onClick={() => handleViewChange("listView")}
               sx={{
-                border: "1px solid #6AA3C2",
+                border: viewType === "listView" ? "2px solid #6AA3C2" : "",
                 width: "37px",
                 height: "37px",
                 p: "5px",
                 borderRadius: "2px",
+                cursor: "pointer",
                 mx: 1.2,
+                "&:hover": {
+                  border: "2px solid #6AA3C2",
+                },
               }}
             />
             <Autocomplete
+              disableClearable={true}
               disablePortal
               id="combo-box-demo"
               options={sorting}
@@ -73,90 +922,71 @@ const MainBox = () => {
             />
           </Box>
           {/* VIEW 12/24/ALL */}
-          <Box sx={{ ml: "auto", pr: 2 }}>
-            <Typography
-              sx={{
-                fontFamily: "'Oswald', sans-serif",
-                fontWeight: 400,
-                fontSize: "12px",
-                lineHeight: "34px",
+          <Stack
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            sx={{ ml: "auto", pr: 2 }}
+          >
+            <Typography>View: &nbsp;</Typography>
+            <Autocomplete
+              disableClearable={true}
+              disablePortal
+              id="combo-box-demo"
+              options={paginationPerPageOptions}
+              size="small"
+              defaultValue="12"
+              value={itemsPerPage}
+              onChange={handleItemsPerPage}
+              sx={{ p: 0 }}
+              renderInput={(params) => {
+                console.log(params);
+                return <TextField {...params} />;
               }}
-            >
-              VIEW: 12/24/ALL
-            </Typography>
-          </Box>
+            />
+          </Stack>
         </Box>
         {/* Divider */}
         <Box sx={{ height: "0.5px", width: "100%", bgcolor: "#192d34" }}></Box>
       </Box>
-      <Box
-        sx={{
-          pt: 2,
-          width: "260px",
-          px: "1px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <Avatar
-          src={hovered ? images.back : images.front}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          sx={{
-            borderRadius: "0",
-            width: "258px",
-            height: "258px",
-            opacity: "0.8",
-          }}
-        />
-        <Typography
-          sx={{
-            fontFamily: "'Oswald', sans-serif",
-            fontWeight: 300,
-            fontSize: "12px",
-            lineHeight: "12px",
-            fontStyle: "italic",
-            color: "#3a6878",
-            py: 0.8,
-            letterSpacing: "0.5px",
-          }}
-        >
-          Casual Wear, T-Shirts
-        </Typography>
-        <Typography
-          sx={{
-            fontFamily: "'Oswald', sans-serif",
-            fontWeight: 600,
-            fontSize: "14px",
-            lineHeight: "21px",
-            textAlign: "center",
-          }}
-        >
-          100% cotton Loose Vintage T-Shirt Custom Men Oversized T-shirt
-        </Typography>
-        <Button
-          variant="outlined"
-          sx={{
-            fontFamily: "'Oswald', sans-serif",
-            fontWeight: 600,
-            FileSystem: "18px",
-            lineHeight: "20px",
-            color: "#192d34",
-            border: "1px solid #192d34",
-            borderRadius: "0",
-            mt: 1,
-            py: 1,
-          }}
-        >
-          Read More
-        </Button>
+      <Box width="100%" mt={2}>
+        {viewType === "gridView" ? (
+          <Grid container direction="row" spacing={1}>
+            {paginatedProducts.map((product, index) => {
+              return (
+                <Grid item xs={12} sm={6} md={3} key={index}>
+                  <Product product={product} viewType={viewType}></Product>
+                </Grid>
+              );
+            })}
+          </Grid>
+        ) : (
+          <Stack>
+            {paginatedProducts.map((product, index) => {
+              return <Product product={product} viewType={viewType}></Product>;
+            })}
+          </Stack>
+        )}
+        {itemsPerPage !== "ALL" ? (
+          <Box display="flex" justifyContent="flex-end" mt={2}>
+            <Pagination
+              count={Math.ceil(products.length / itemsPerPage)}
+              variant="outlined"
+              shape="rounded"
+              page={page}
+              defaultPage={1}
+              boundaryCount={2}
+              onChange={(event, pageNumber) =>
+                pageChangeHandler(event, pageNumber)
+              }
+            />
+          </Box>
+        ) : (
+          ""
+        )}
       </Box>
     </Box>
   );
 };
 
 export default MainBox;
-// fontFamily: "'Oswald', sans-serif",
-// dark: #192d34
-// light: #bde7fd

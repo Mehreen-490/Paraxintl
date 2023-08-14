@@ -32,4 +32,6 @@ export default {
   front: require("./images/19.jpg"),
   back: require("./images/20.jpg"),
   footer: require("./images/21.jpg"),
+  parallax_home_after_slider_background:
+    "https://apparel.paraxintl.com/wp-content/uploads/2022/10/banner-1.jpg",
 };

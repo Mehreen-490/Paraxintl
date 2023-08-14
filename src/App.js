@@ -1,5 +1,5 @@
-import { Box } from "@mui/material";
 import "./App.css";
+import { Box } from "@mui/material";
 import HomePage from "./pages/HomePage";
 import { Route, Routes } from "react-router";
 import ApparelPage from "./pages/ApparelPage";
@@ -10,6 +10,7 @@ import ApparelOrderPage from "./pages/ApparelSection/ApparelOrderPage";
 import ApparelAboutPage from "./pages/ApparelSection/ApparelAboutPage";
 import ApparelContactPage from "./pages/ApparelSection/ApparelContactPage";
 import ApparelProductPage from "./pages/ApparelSection/ApparelProductPage";
+import ApparelProductDetailPage from "./pages/ApparelSection/ApparelProductDetailPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/about-us" element={<ApparelAboutPage />} />
         <Route path="/contact-us" element={<ApparelContactPage />} />
         <Route path="/product" element={<ApparelProductPage />} />
+        <Route path="/product-detail" element={<ApparelProductDetailPage />} />
         {/* Surgical Section */}
         <Route path="/surgical/about-us" element={<SurgicalAboutPage />} />
         <Route path="/surgical/contact-us" element={<SurgicalContactPage />} />
