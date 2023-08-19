@@ -1,13 +1,4 @@
-import {
-  Autocomplete,
-  Avatar,
-  Box,
-  Button,
-  Chip,
-  TextField,
-  Typography,
-} from "@mui/material";
-import images from "../../../assets/images";
+import { Avatar, Box, Button, Chip, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { Stack } from "@mui/system";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
@@ -135,7 +126,7 @@ const Product = ({ product, viewType }) => {
             sx={{
               fontFamily: "'Oswald', sans-serif",
               fontWeight: 600,
-              FileSystem: "18px",
+              fontSize: "16px",
               lineHeight: "20px",
               color: "#192d34",
               border: "1px solid #192d34",

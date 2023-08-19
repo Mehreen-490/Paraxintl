@@ -1,19 +1,12 @@
 import { Box, Chip, Typography } from "@mui/material";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import { Stack } from "@mui/system";
-import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
-import InsertLinkIcon from "@mui/icons-material/InsertLink";
 import * as React from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import "swiper/css/navigation";
 

@@ -7,34 +7,44 @@ function Footer() {
     <Box
       sx={{
         width: "100%",
-        background: "white",
-        backgroundImage: `url(${images.footer})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "100%",
-        color: "#bde7fd",
-        letterSpacing: "1px",
-        pt: 30,
-        px: {
-          xs: 5,
-          sm: 10,
-          md: 10,
-          lg: 10,
-          xl: 10,
+        backgroundImage: {
+          xs: "none",
+          md: `url(${images.footer})`,
         },
-        pb: 1,
+        bgcolor: "#212A39",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "100% 100%",
+        color: "white",
+        letterSpacing: "1px",
+        pt: 17,
+        px: 5,
+        pb: 4,
       }}
     >
-      <Grid container columnSpacing={1}>
+      <Grid container columnSpacing={1} pt={3}>
         {/* Parax Heading & Desc. */}
-        <Grid item xl={3.5} lg={6} sm={12} p={3}>
+        <Grid
+          item
+          xl={3.5}
+          lg={6}
+          md={6}
+          sm={12}
+          xs={12}
+          p={{
+            xs: 1,
+            lg: 3,
+          }}
+        >
           {/* Parax heading */}
           <Typography
             variant="h2"
             sx={{
-              fontSize: "25px",
-              lineHeight: "25px",
+              fontSize: {
+                xs: "15px",
+                sm: "20px",
+              },
+              lineHeight: "20px",
               fontWeight: "600",
-              fontFamily: "'Barlow Condensed', sans-serif",
               pb: 3,
               letterSpacing: "1px",
             }}
@@ -45,11 +55,15 @@ function Footer() {
           <Typography
             sx={{
               fontWeight: "400",
-              fontSize: "16px",
+              fontSize: "14px",
               lineHeight: "29px",
-              fontFamily: "'Barlow Condensed', sans-serif",
-              // width: "390px",
               textAlign: "justify",
+              width: {
+                xs: "100%",
+                md: "85%",
+                lg: "75%",
+                xl: "100%",
+              },
             }}
           >
             Parax International is a manufacturer of extreme quality Sports
@@ -60,14 +74,16 @@ function Footer() {
           </Typography>
         </Grid>
         {/* Quick Links */}
-        <Grid item xl={2.5} lg={6} sm={12} p={3}>
+        <Grid item xl={2} lg={6} md={6} sm={12} xs={12} p={3}>
           <Typography
             variant="h2"
             sx={{
-              fontSize: "25px",
-              lineHeight: "25px",
+              fontSize: {
+                xs: "15px",
+                sm: "20px",
+              },
+              lineHeight: "20px",
               fontWeight: "600",
-              fontFamily: "'Barlow Condensed', sans-serif",
               pb: 3,
               letterSpacing: "1px",
             }}
@@ -76,10 +92,9 @@ function Footer() {
           </Typography>
           <Typography
             sx={{
-              fontSize: "17px",
+              fontSize: "14px",
               lineHeight: "31px",
               fontWeight: 400,
-              fontFamily: "'Barlow Condensed', sans-serif",
               pb: "10px",
             }}
           >
@@ -87,10 +102,9 @@ function Footer() {
           </Typography>
           <Typography
             sx={{
-              fontSize: "17px",
+              fontSize: "14px",
               lineHeight: "31px",
               fontWeight: 400,
-              fontFamily: "'Barlow Condensed', sans-serif",
               pb: "10px",
             }}
           >
@@ -98,10 +112,9 @@ function Footer() {
           </Typography>
           <Typography
             sx={{
-              fontSize: "17px",
+              fontSize: "14px",
               lineHeight: "31px",
               fontWeight: 400,
-              fontFamily: "'Barlow Condensed', sans-serif",
               pb: "10px",
             }}
           >
@@ -109,10 +122,9 @@ function Footer() {
           </Typography>
           <Typography
             sx={{
-              fontSize: "17px",
+              fontSize: "14px",
               lineHeight: "31px",
               fontWeight: 400,
-              fontFamily: "'Barlow Condensed', sans-serif",
               pb: "10px",
             }}
           >
@@ -120,14 +132,16 @@ function Footer() {
           </Typography>
         </Grid>
         {/* Product Categories */}
-        <Grid item xl={2.5} lg={6} sm={12} p={3}>
+        <Grid item xl={2.5} lg={6} md={6} sm={12} xs={12} p={3}>
           <Typography
             variant="h2"
             sx={{
-              fontSize: "25px",
-              lineHeight: "25px",
+              fontSize: {
+                xs: "15px",
+                sm: "20px",
+              },
+              lineHeight: "20px",
               fontWeight: "600",
-              fontFamily: "'Barlow Condensed', sans-serif",
               pb: 3,
               letterSpacing: "1px",
             }}
@@ -136,10 +150,9 @@ function Footer() {
           </Typography>
           <Typography
             sx={{
-              fontSize: "17px",
+              fontSize: "14px",
               lineHeight: "31px",
               fontWeight: 400,
-              fontFamily: "'Barlow Condensed', sans-serif",
               pb: "10px",
             }}
           >
@@ -147,10 +160,9 @@ function Footer() {
           </Typography>
           <Typography
             sx={{
-              fontSize: "17px",
+              fontSize: "14px",
               lineHeight: "31px",
               fontWeight: 400,
-              fontFamily: "'Barlow Condensed', sans-serif",
               pb: "10px",
             }}
           >
@@ -158,10 +170,9 @@ function Footer() {
           </Typography>
           <Typography
             sx={{
-              fontSize: "17px",
+              fontSize: "14px",
               lineHeight: "31px",
               fontWeight: 400,
-              fontFamily: "'Barlow Condensed', sans-serif",
               pb: "10px",
             }}
           >
@@ -169,10 +180,9 @@ function Footer() {
           </Typography>
           <Typography
             sx={{
-              fontSize: "17px",
+              fontSize: "14px",
               lineHeight: "31px",
               fontWeight: 400,
-              fontFamily: "'Barlow Condensed', sans-serif",
               pb: "10px",
             }}
           >
@@ -180,15 +190,17 @@ function Footer() {
           </Typography>
         </Grid>
         {/* Get In Touch */}
-        <Grid item xl={3.5} lg={6} sm={12} p={3}>
+        <Grid item xl={3.5} lg={6} md={6} sm={12} xs={12} p={3}>
           {/* Heading Typography */}
           <Typography
             variant="h2"
             sx={{
-              fontSize: "25px",
-              lineHeight: "25px",
+              fontSize: {
+                xs: "15px",
+                sm: "20px",
+              },
+              lineHeight: "20px",
               fontWeight: "600",
-              fontFamily: "'Barlow Condensed', sans-serif",
               pb: 3.5,
             }}
           >
@@ -207,20 +219,18 @@ function Footer() {
             <Box>
               <Typography
                 sx={{
-                  fontSize: "17px",
+                  fontSize: "14px",
                   lineHeight: "31px",
                   fontWeight: 600,
-                  fontFamily: "'Barlow Condensed', sans-serif",
                 }}
               >
                 Address:
               </Typography>
               <Typography
                 sx={{
-                  fontSize: "17px",
+                  fontSize: "14px",
                   lineHeight: "31px",
                   fontWeight: 400,
-                  fontFamily: "'Barlow Condensed', sans-serif",
                   // pb: "10px",
                 }}
               >
@@ -241,20 +251,18 @@ function Footer() {
             <Box>
               <Typography
                 sx={{
-                  fontSize: "17px",
+                  fontSize: "14px",
                   lineHeight: "31px",
                   fontWeight: 600,
-                  fontFamily: "'Barlow Condensed', sans-serif",
                 }}
               >
                 Phone:
               </Typography>
               <Typography
                 sx={{
-                  fontSize: "17px",
+                  fontSize: "14px",
                   lineHeight: "31px",
                   fontWeight: 400,
-                  fontFamily: "'Barlow Condensed', sans-serif",
                   // pb: "10px",
                 }}
               >
@@ -275,20 +283,18 @@ function Footer() {
             <Box>
               <Typography
                 sx={{
-                  fontSize: "17px",
+                  fontSize: "14px",
                   lineHeight: "31px",
                   fontWeight: 600,
-                  fontFamily: "'Barlow Condensed', sans-serif",
                 }}
               >
                 Email:
               </Typography>
               <Typography
                 sx={{
-                  fontSize: "17px",
+                  fontSize: "14px",
                   lineHeight: "31px",
                   fontWeight: 400,
-                  fontFamily: "'Barlow Condensed', sans-serif",
                   pb: "10px",
                 }}
               >
@@ -306,7 +312,7 @@ function Footer() {
           sx={{
             height: "4px",
             width: "100%",
-            bgcolor: "#bde7fd",
+            bgcolor: "white",
           }}
         ></Box>
       </Box>
@@ -324,7 +330,7 @@ function Footer() {
             sm: "column",
             md: "row",
           },
-          p: 4,
+          p: 2,
         }}
       >
         <Box display="flex" p={2}>
@@ -344,9 +350,8 @@ function Footer() {
         {/* Copyright 2023 */}
         <Typography
           sx={{
-            fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: "400",
-            fontSize: "17px",
+            fontSize: "14px",
             lineHeight: "23px",
             ml: {
               xs: 0,

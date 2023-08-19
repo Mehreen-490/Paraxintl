@@ -40,6 +40,7 @@ function getSliderImage(imageSrc, imageIndex) {
         >
           <a
             href={imageSrc}
+            // eslint-disable-next-line
             key={"my-test-gallery" + "-" + imageIndex}
             target="_blank"
             rel="noreferrer"
@@ -50,7 +51,7 @@ function getSliderImage(imageSrc, imageIndex) {
               onClick={handleViewSimpleGallery}
               height="2px"
               sx={{
-                color: "white",
+                // color: "white",
                 backgroundColor: "#f1f1f1",
                 borderRadius: "4px",
                 color: "black",
@@ -134,7 +135,7 @@ export default function ProductDetailPageSlider() {
         {images.map((imageSrc, i) => {
           return (
             <SwiperSlide key={i}>
-              <img src={imageSrc} />
+              <img src={imageSrc} alt="" />
             </SwiperSlide>
           );
         })}
