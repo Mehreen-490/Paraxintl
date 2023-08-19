@@ -7,7 +7,9 @@ function RelatedProducts() {
       <Typography fontWeight="bold" variant="h6">
         RelatedProducts
       </Typography>
-      <Stack direction="row"></Stack>
+      <Stack direction="row">
+        <Box></Box>
+      </Stack>
     </Box>
   );
 }
