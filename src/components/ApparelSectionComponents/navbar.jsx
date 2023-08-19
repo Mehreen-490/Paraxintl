@@ -27,7 +27,7 @@ function Navbar() {
     <Box sx={{ width: "100%", display: "flex", flexDirection: "column" }}>
       <AppBar
         disableGutters
-        elevation={10}
+        elevation={2}
         sx={{
           height: "90px",
           display: "flex",

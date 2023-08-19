@@ -42,4 +42,19 @@ export default {
   high_quality: require("./images/30.png"),
   sample: require("./images/31.png"),
   choose_us: require("./images/32.png"),
+  parallax_home_after_slider_background:
+    "https://apparel.paraxintl.com/wp-content/uploads/2022/10/banner-1.jpg",
+  contact_page: {
+    address: require("./images/33.png"),
+    phone: require("./images/34.png"),
+    mail: require("./images/35.png"),
+    link: require("./images/36.png"),
+  },
+  how_to_order_page: {
+    how_to_order: require("./images/37.jpg"),
+    bg: require("./images/38.jpg"),
+    design_select: require("./images/39.png"),
+    invoice: require("./images/40.png"),
+    order_confirm: require("./images/41.png"),
+  },
 };

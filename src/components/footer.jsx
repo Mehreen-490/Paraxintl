@@ -7,7 +7,6 @@ function Footer() {
     <Box
       sx={{
         width: "100%",
-        background: "white",
         backgroundImage: {
           xs: "none",
           md: `url(${images.footer})`,
