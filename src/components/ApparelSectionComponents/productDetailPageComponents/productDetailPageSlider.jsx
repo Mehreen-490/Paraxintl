@@ -22,14 +22,14 @@ function getSliderImage(imageSrc, imageIndex) {
       <Box
         sx={{
           position: "relative",
-          backgroundImage: `url("${imageSrc}")`,
           backgroundSize: "100% 100%",
+          backgroundImage: `url(${imageSrc})`,
         }}
-        width="100%"
-        height="400px"
         key={imageIndex}
+        width="100%"
+        height="100%"
       >
-        {/* <img src={imageSrc} /> */}
+        {/* <img src={imageSrc} width="100%" height="100%" /> */}
         <Box
           sx={{
             position: "absolute",
@@ -94,11 +94,18 @@ export default function ProductDetailPageSlider() {
   ];
 
   return (
-    <Box width="100%" bgcolor="black" className="productDetailPageSlider">
+    <Box
+      bgcolor="black"
+      width="100%"
+      height="100%"
+      className="productDetailPageSlider"
+    >
       <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
           "--swiper-pagination-color": "#fff",
+          width: "100%",
+          height: "80%",
         }}
         spaceBetween={10}
         navigation={true}
@@ -119,6 +126,10 @@ export default function ProductDetailPageSlider() {
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper"
+        style={{
+          width: "100%",
+          height: "20%",
+        }}
       >
         {images.map((imageSrc, i) => {
           return (

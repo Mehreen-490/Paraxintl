@@ -11,14 +11,11 @@
 /* detail page slider css */
 
 .productDetailPageSlider .mySwiper {
-  height: 20%;
   box-sizing: border-box;
   padding: 10px;
 }
 
 .productDetailPageSlider .mySwiper .swiper-slide {
-  width: 25%;
-  height: 100%;
   opacity: 0.4;
 }
 
