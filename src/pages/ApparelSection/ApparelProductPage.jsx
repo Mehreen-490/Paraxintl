@@ -18,7 +18,7 @@ const ApparelProductPage = () => {
         <Box sx={{ width: "300px" }}>
           <Sidebar />
         </Box>
-        <Box sx={{ width: "calc(100% - 400px)" }}>
+        <Box sx={{ width: "calc(100% - 300px)" }}>
           <MainBox />
         </Box>
       </Stack>
