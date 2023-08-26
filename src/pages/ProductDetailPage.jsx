@@ -14,8 +14,10 @@ const ProductDetailPage = () => {
     >
       <Navbar />
       <Box sx={{ display: "flex" }} width="100%">
-        <Box width="30%">{/* <Sidebar /> */}</Box>
-        <Box width="70%">
+        <Box sx={{ width: "300px" }}>
+          <Sidebar />
+        </Box>
+        <Box sx={{ width: "calc(100% - 300px)" }}>
           <MainBox />
         </Box>
       </Box>

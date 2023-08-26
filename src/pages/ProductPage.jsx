@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import React from "react";
 import Navbar from "../components/navbar";
 import Sidebar from "../components/productPageComponents/sidebar";
@@ -14,10 +14,14 @@ const ApparelProductPage = () => {
       }}
     >
       <Navbar />
-      <Box sx={{ display: "flex" }}>
-        <Sidebar />
-        <MainBox />
-      </Box>
+      <Stack direction="row">
+        <Box sx={{ width: "300px" }}>
+          <Sidebar />
+        </Box>
+        <Box sx={{ width: "calc(100% - 300px)" }}>
+          <MainBox />
+        </Box>
+      </Stack>
       <Footer />
     </Box>
   );
