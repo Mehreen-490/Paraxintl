@@ -1,9 +1,18 @@
-import { Avatar, Box, Grid, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Button,
+  Chip,
+  Grid,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import images from "../../assets/images";
+import MuiRating from "../shared/muiRating";
 const About = () => {
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%", px: 4, py: 4 }}>
       <Grid
         width="100%"
         container
@@ -296,8 +305,89 @@ const About = () => {
           />
         </Grid>
       </Grid>
+      <Box
+        sx={{
+          width: "300px",
+          height: "500px",
+          borderRadius: "20px",
+          boxShadow: "0px 6px 6px 8px rgba(0, 0, 0, 0.1)",
+          py: 1,
+          px: 1,
+          display: "flex",
+          flexDirection: "column",
+          bgcolor: "#f2f2f2",
+        }}
+      >
+        <Avatar
+          src={images.scissor}
+          sx={{
+            width: "340px",
+            height: "340px",
+            borderRadius: "20px",
+            maxWidth: "100%",
+          }}
+        />
+        <Box sx={{ p: 1 }}>
+          <Typography
+            sx={{
+              fontFamily: "'Manrope', sans-serif",
+              fontSize: "14px",
+              lineHeight: "23px",
+              fontWeight: "bold",
+            }}
+          >
+            100% cotton Loose Vintage T-Shirt Custom Men Oversized T-shirt
+          </Typography>
+          <Stack direction="row" spacing={0.5}>
+            <Chip
+              size="small"
+              label={
+                <Typography
+                  sx={{
+                    fontFamily: "'Manrope', sans-serif",
+                    fontSize: "10px",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Casaul Wear
+                </Typography>
+              }
+              sx={{
+                bgcolor: "#2a2e35",
+                color: "white",
+              }}
+            />
+            <Chip
+              size="small"
+              label={
+                <Typography
+                  sx={{
+                    fontFamily: "'Manrope', sans-serif",
+                    fontSize: "10px",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  {" "}
+                  T-shirts
+                </Typography>
+              }
+              sx={{
+                bgcolor: "#2a2e35",
+                color: "white",
+              }}
+            />
+          </Stack>
+          <Box sx={{ display: "flex", justifyContent: "space-between", py: 1 }}>
+            <Button disableRipple sx={{ color: "#2a2e39", p: 0 }}>
+              Read More...
+            </Button>
+            <MuiRating />
+          </Box>
+        </Box>
+      </Box>
     </Box>
   );
 };
 
 export default About;
+// Card Design

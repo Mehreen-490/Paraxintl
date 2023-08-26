@@ -3,8 +3,27 @@ import { Box, Button, TextField, Typography } from "@mui/material";
 const ContactForm = () => {
   return (
     <Box
-      px={5}
-      sx={{ width: "100%", py: 21, display: "flex", flexDirection: "column" }}
+      sx={{
+        width: "100%",
+        py: {
+          md: 21,
+          xs: 5,
+        },
+        display: "flex",
+        flexDirection: "column",
+      }}
+      pr={{
+        xl: 45,
+        lg: 25,
+        md: 13,
+        sm: 8,
+        xs: 5,
+      }}
+      pl={{
+        md: 5,
+        sm: 5,
+        xs: 2,
+      }}
     >
       <TextField
         placeholder="Full Name"
@@ -14,7 +33,7 @@ const ContactForm = () => {
             "& > fieldset": {
               border: "1px solid #d3d8de",
               borderRadius: 2,
-              width: "50%",
+              width: "100%",
             },
             "& input": {
               color: "#738298",
@@ -37,7 +56,7 @@ const ContactForm = () => {
             "& > fieldset": {
               border: "1px solid #d3d8de",
               borderRadius: 2,
-              width: "50%",
+              width: "100%",
             },
             "& input": {
               color: "#738298",
@@ -60,7 +79,7 @@ const ContactForm = () => {
             "& > fieldset": {
               border: "1px solid #d3d8de",
               borderRadius: 2,
-              width: "50%",
+              width: "100%",
             },
             "& input": {
               color: "#738298",
@@ -89,6 +108,9 @@ const ContactForm = () => {
           bgcolor: "#2a2e39",
           mt: 1,
           ml: "2px",
+          "&:hover": {
+            bgcolor: "#414758",
+          },
         }}
       >
         <Typography

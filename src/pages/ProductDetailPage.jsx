@@ -1,10 +1,9 @@
 import { Box } from "@mui/material";
 import React from "react";
-import Navbar from "../../components/navbar";
-// import Sidebar from "../../components/ApparelSectionComponents/productPageComponents/sidebar";
-import Footer from "../../components/footer";
-import MainBox from "../../components/ApparelSectionComponents/productDetailPageComponents/mainBox";
-const ApparelProductDetailPage = () => {
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
+import MainBox from "../components/productPageComponents/mainBox";
+const ProductDetailPage = () => {
   return (
     <Box
       sx={{
@@ -25,4 +24,4 @@ const ApparelProductDetailPage = () => {
   );
 };
 
-export default ApparelProductDetailPage;
+export default ProductDetailPage;

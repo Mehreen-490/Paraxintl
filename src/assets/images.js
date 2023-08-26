@@ -57,4 +57,29 @@ export default {
     invoice: require("./images/40.png"),
     order_confirm: require("./images/41.png"),
   },
+
+  scissor: require("./images/42.jpg"),
+  product_quality: {
+    reusable: require("./images/43.png"),
+    wide_range: require("./images/44.png"),
+    trained_workforce: require("./images/45.png"),
+    disposable: require("./images/46.png"),
+  },
+  product_category: {
+    electro_surgical_instruments: require("./images/47.png"),
+    beauty_instruments: require("./images/48.jpg"),
+    dental_instruments: require("./images/49.jpg"),
+    surgical_instruments: require("./images/50.png"),
+    plastic_surgery_instruments: require("./images/51.png"),
+    gynecology_instruments: require("./images/52.png"),
+    single_use_instruments: require("./images/53.png"),
+    misc_instruments: require("./images/54.png"),
+  },
+  featured_products: {
+    castroviejo_corneal_scissors: require("./images/55.jpg"),
+    castroviejo_scissors: require("./images/56.jpg"),
+    castroviejo_micro_corneal_scissors: require("./images/57.jpg"),
+    castroviejo_miniature_corneal_scissors: require("./images/58.jpg"),
+    corneal_scissors: require("./images/59.jpg"),
+  },
 };

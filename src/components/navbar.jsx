@@ -10,19 +10,24 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import { NavLink } from "react-router-dom";
 import images from "../assets/images";
-import NestedMenu from "./shared/nestedMenu";
+import MuiNestedMenu from "./shared/muiNestedMenu";
 
 function Navbar() {
   return (
     <Box sx={{ width: "100%", display: "flex", flexDirection: "column" }}>
       <AppBar
+        elevation={4}
         sx={{
           height: "60px",
           display: "flex",
           bgcolor: "white",
           color: "#212a39",
           justifyContent: "center",
-          pl: 0.5,
+          pl: {
+            md: 3,
+            sm: 1,
+            xs: 0,
+          },
         }}
       >
         <Toolbar>
@@ -45,7 +50,10 @@ function Navbar() {
                   disableRipple
                   sx={{
                     py: 1,
-                    px: 3,
+                    px: {
+                      md: 3,
+                      xs: 0,
+                    },
                   }}
                   component={NavLink}
                   to="/apparel"
@@ -74,7 +82,7 @@ function Navbar() {
                 </Button>
 
                 {/* Products */}
-                <NestedMenu />
+                <MuiNestedMenu />
                 {/* How To Order */}
                 <Button
                   variant="contained"

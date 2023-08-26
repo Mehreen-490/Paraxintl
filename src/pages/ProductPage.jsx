@@ -1,9 +1,9 @@
 import { Box } from "@mui/material";
 import React from "react";
-import Navbar from "../../components/navbar";
-import Sidebar from "../../components/ApparelSectionComponents/productPageComponents/sidebar";
-import Footer from "../../components/footer";
-import MainBox from "../../components/ApparelSectionComponents/productPageComponents/mainBox";
+import Navbar from "../components/navbar";
+import Sidebar from "../components/productPageComponents/sidebar";
+import Footer from "../components/footer";
+import MainBox from "../components/productPageComponents/mainBox";
 const ApparelProductPage = () => {
   return (
     <Box

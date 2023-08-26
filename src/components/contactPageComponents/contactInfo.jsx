@@ -1,6 +1,6 @@
 import { Avatar, Box, Typography } from "@mui/material";
 import React from "react";
-import images from "../../../assets/images";
+import images from "../../assets/images";
 
 const ContactInfo = () => {
   const sharedFontStyles = {
@@ -8,111 +8,143 @@ const ContactInfo = () => {
       "'Cantarell', 'Inter', 'Oxygen', 'Roboto', 'Ubuntu','Rubik Mono One','Titan One', sans-serif",
   };
   return (
-    <Box sx={{ width: "100%", pl: 35, py: 18 }}>
-      {/* Get In Touch Typography */}
-      <Typography
-        sx={{
-          color: "#2a2e39",
-          fontWeight: 900,
-          fontSize: "36px",
-          lineHeight: "20px",
+    <Box
+      sx={{
+        width: "100%",
+        pl: {
+          xl: 35,
+          lg: 15,
+          md: 9,
+          sm: 5,
+          xs: 2,
+        },
+        pt: {
+          md: 18,
+          sm: 15,
+          xs: 10,
+        },
+      }}
+    >
+      <Box>
+        {/* Get In Touch Typography */}
+        <Typography
+          sx={{
+            color: "#2a2e39",
+            fontWeight: 900,
+            fontSize: {
+              sm: "36px",
+              xs: "30px",
+            },
+            lineHeight: "20px",
 
-          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
-        }}
-        style={sharedFontStyles}
-      >
-        Get in touch
-      </Typography>
-      {/* Fill Form Typography */}
-      <Typography
-        sx={{
-          color: "#738298",
-          fontWeight: 500,
-          fontSize: "20px",
-          lineHeight: "20px",
-          letterSpacing: "0.5px",
-          pl: "3px",
-          pt: 3,
-          pb: 3.3,
-        }}
-      >
-        Fill in the form to start a conversation{" "}
-      </Typography>
-      {/* Address Box */}
-      <Box
-        sx={{
-          textAlign: "justify",
-          display: "flex",
-          width: "50%",
-          alignItems: "center",
-          pb: 3,
-        }}
-      >
-        <Avatar
-          src={images.contact_page.address}
-          sx={{ borderRadius: 0, width: "23px", height: "23px", mr: 2 }}
-        />
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
+          }}
+          style={sharedFontStyles}
+        >
+          Get in touch
+        </Typography>
+        {/* Fill Form Typography */}
         <Typography
           sx={{
             color: "#738298",
-            fontWeight: 400,
-            fontSize: "16px",
-            lineHeight: "23px",
+            fontWeight: 500,
+            fontSize: {
+              fontSize: {
+                sm: "20px",
+                xs: "16px",
+              },
+            },
+            lineHeight: "20px",
+            letterSpacing: "0.5px",
+            pl: "3px",
+            pt: 3,
+            pb: 3.3,
           }}
         >
-          Daska Road, Pasrur Bypass, Pakki Kotli, Sialkot-51310, Pakistan
+          Fill in the form to start a conversation{" "}
         </Typography>
-      </Box>
-      {/* Phone Box */}
-      <Box sx={{ display: "flex", width: "40%", alignItems: "center", pb: 3 }}>
-        <Avatar
-          src={images.contact_page.phone}
-          sx={{ borderRadius: 0, width: "23px", height: "23px", mr: 2 }}
-        />
-        <Typography
+        {/* Address Box */}
+        <Box
           sx={{
-            color: "#738298",
-            fontWeight: 400,
-            fontSize: "16px",
-            lineHeight: "23px",
+            textAlign: "justify",
+            display: "flex",
+            width: {
+              lg: "70%",
+              md: "80%",
+              xs: "90%",
+            },
+            alignItems: "center",
+            pb: 3,
           }}
         >
-          +92 300 6175621
-        </Typography>
-      </Box>
-      {/* Mail Box */}
-      <Box sx={{ display: "flex", width: "40%", alignItems: "center", pb: 3 }}>
-        <Avatar
-          src={images.contact_page.mail}
-          sx={{ borderRadius: 0, width: "23px", height: "23px", mr: 2 }}
-        />
-        <Typography
-          sx={{
-            color: "#738298",
-            fontWeight: 400,
-            fontSize: "16px",
-            lineHeight: "23px",
-          }}
+          <Avatar
+            src={images.contact_page.address}
+            sx={{ borderRadius: 0, width: "23px", height: "23px", mr: 2 }}
+          />
+          <Typography
+            sx={{
+              color: "#738298",
+              fontWeight: 400,
+              fontSize: "16px",
+              lineHeight: "23px",
+            }}
+          >
+            Daska Road, Pasrur Bypass, Pakki Kotli, Sialkot-51310, Pakistan
+          </Typography>
+        </Box>
+        {/* Phone Box */}
+        <Box sx={{ display: "flex", alignItems: "center", pb: 3 }}>
+          <Avatar
+            src={images.contact_page.phone}
+            sx={{ borderRadius: 0, width: "23px", height: "23px", mr: 2 }}
+          />
+          <Typography
+            sx={{
+              color: "#738298",
+              fontWeight: 400,
+              fontSize: "16px",
+              lineHeight: "23px",
+            }}
+          >
+            +92 300 6175621
+          </Typography>
+        </Box>
+        {/* Mail Box */}
+        <Box
+          sx={{ display: "flex", width: "40%", alignItems: "center", pb: 3 }}
         >
-          sales@paraxintl.com
-        </Typography>
-      </Box>
-      {/* Website Link Box */}
-      <Box sx={{ display: "flex", width: "40%", alignItems: "center" }}>
-        <Avatar
-          src={images.contact_page.link}
-          sx={{ borderRadius: 0, width: "20px", height: "20px", mr: 2 }}
-        />
-        <Typography
-          sx={{
-            color: "#738298",
-            fontWeight: 400,
-            fontSize: "16px",
-            lineHeight: "23px",
-          }}
-        >
-          www.paraxintl.com
-        </Typography>
+          <Avatar
+            src={images.contact_page.mail}
+            sx={{ borderRadius: 0, width: "23px", height: "23px", mr: 2 }}
+          />
+          <Typography
+            sx={{
+              color: "#738298",
+              fontWeight: 400,
+              fontSize: "16px",
+              lineHeight: "23px",
+            }}
+          >
+            sales@paraxintl.com
+          </Typography>
+        </Box>
+        {/* Website Link Box */}
+        <Box sx={{ display: "flex", width: "40%", alignItems: "center" }}>
+          <Avatar
+            src={images.contact_page.link}
+            sx={{ borderRadius: 0, width: "20px", height: "20px", mr: 2 }}
+          />
+          <Typography
+            sx={{
+              color: "#738298",
+              fontWeight: 400,
+              fontSize: "16px",
+              lineHeight: "23px",
+            }}
+          >
+            www.paraxintl.com
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );
