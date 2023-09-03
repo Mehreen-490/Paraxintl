@@ -2,7 +2,8 @@ import { Box } from "@mui/material";
 import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import MainBox from "../components/productPageComponents/mainBox";
+import Sidebar from "../components/productPageComponents/sidebar";
+import MainBox from "../components/productDetailPageComponents/mainBox";
 const ProductDetailPage = () => {
   return (
     <Box
