@@ -10,10 +10,10 @@ import { Box } from "@mui/material";
 
 const customStyle = {
   "& .MuiRating-iconFilled": {
-    color: "#fde358",
+    color: "#faaf00",
   },
   "& .MuiRating-iconHover": {
-    color: "#fef08a",
+    color: "#ffd166",
   },
   "& .MuiRating-decimal:hover": {
     transform: "scale(1)",

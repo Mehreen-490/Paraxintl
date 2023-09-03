@@ -1,6 +1,5 @@
-import { Box, Button, Stack, TextField, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
-import Accordian from "./accordian";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -9,18 +8,14 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Checkbox from "@mui/material/Checkbox";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
-import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import DirectionsIcon from "@mui/icons-material/Directions";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
-  border: `1px solid ${theme.palette.divider}`,
   "&:not(:last-child)": {
-    borderBottom: 0,
+    border: 0,
   },
   "&:before": {
     display: "none",
@@ -146,42 +141,67 @@ const Sidebar = () => {
     <Box
       sx={{
         width: "100%",
-        height: "100%",
+        height: "800px",
         padding: "10px",
-        backgroundColor: "#f9f9f9",
+        backgroundColor: "white",
+        boxShadow: "0px 0px 10px rgba(236, 242, 249)",
+        ml: 1,
+        py: 3,
+        borderRadius: "10px",
       }}
     >
       <Stack>
-        <Box sx={{ boxShadow: 3 }}>
+        {/* Search Textfield */}
+        <Box sx={{ borderRadius: "10px" }}>
           <Paper
             component="form"
             sx={{
               p: "2px 4px",
               display: "flex",
               alignItems: "center",
+              borderRadius: "10px",
+              background: "#f6f9fc",
             }}
           >
             <InputBase
-              sx={{ ml: 1, flex: 1 }}
+              sx={{ ml: 1, flex: 1, background: "#f6f9fc" }}
               placeholder="Search Products"
-              inputProps={{ "aria-label": "search products" }}
+              inputProps={{
+                "aria-label": "search products",
+              }}
             />
             <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
               <SearchIcon />
             </IconButton>
           </Paper>
         </Box>
-        <Box my={2}>
-          <Typography variant="subtitle2">Product Categories</Typography>
+        {/* Instrument Categories Heading Box */}
+        <Box px={2} pt={3} pb={1}>
+          {/* Instrument Categories Typography */}
+
+          <Typography
+            variant="subtitle2"
+            sx={{
+              fontFamily: "'Open Sans', sans-serif",
+              fontWeight: 600,
+              fontSize: "15px",
+              lineHeight: "21px",
+              color: "#2b3445",
+              letterSpacing: "0.2px",
+            }}
+          >
+            Instrument Categories
+          </Typography>
         </Box>
+        {/* Accordian Box */}
         <Box
           sx={{
-            background: "#FFFFFF",
+            background: "#f6f6f6",
             borderRadius: "10px",
-            padding: "4px",
-            boxShadow: 3,
+            boxShadow: 0,
           }}
         >
+          {/* Eye Instruments Accordian */}
           <Accordion
             expanded={expanded === "panel1"}
             onChange={handleChange("panel1")}
@@ -190,52 +210,283 @@ const Sidebar = () => {
               aria-controls="panel1d-content"
               id="panel1d-header"
             >
-              {CheckBoxWithText("Casual Wear")}
+              {/* Eye Instruments Typography */}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Eye Instruments
+                </Typography>
+              )}
             </AccordionSummary>
             <AccordionDetails>
-              {CheckBoxWithText("Casual Shirts")}
-              {CheckBoxWithText("Hoodies")}
-              {CheckBoxWithText("Polo Shirts")}
-              {CheckBoxWithText("Shorts")}
-              {CheckBoxWithText("Sweatshirt")}
-              {CheckBoxWithText("T-Shirts")}
-              {CheckBoxWithText("Tracksuit")}
+              {/* Cannulae Typography */}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Cannulae{" "}
+                </Typography>
+              )}
+              {/* Choppers Hooker and Probes Typography */}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Choppers Hooker and Probes{" "}
+                </Typography>
+              )}
+              {/* Disposables Typography */}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Disposables{" "}
+                </Typography>
+              )}
+              {/* Knives and Sharps Typography */}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Knives and Sharps{" "}
+                </Typography>
+              )}
+              {/* Lid Instruments Typography */}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Lid Instruments{" "}
+                </Typography>
+              )}
+              {/* Needle Holders Typography */}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Needle Holders{" "}
+                </Typography>
+              )}
+              {/* Oculoplastic And Lacrimal Typography */}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Oculoplastic And Lacrimal{" "}
+                </Typography>
+              )}
+              {/* Scissors Typography */}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Scissors{" "}
+                </Typography>
+              )}
+              {/* Specialist Instruments Typography */}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Specialist Instruments{" "}
+                </Typography>
+              )}
+              {/* Specula Typography */}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Specula{" "}
+                </Typography>
+              )}
+              {/* Trays Typography */}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Trays{" "}
+                </Typography>
+              )}
+              {/* Vitreoretinal Typography */}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Vitreoretinal{" "}
+                </Typography>
+              )}
             </AccordionDetails>
           </Accordion>
+
+          {/* Dental Instrumnets Box */}
           <Accordion
             expanded={expanded === "panel2"}
             onChange={handleChange("panel2")}
           >
+            {/* Dental Instruments Typography */}
             <AccordionSummary
               aria-controls="panel2d-content"
               id="panel2d-header"
             >
-              {CheckBoxWithText("Fashion Jackets")}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Dental Instruments
+                </Typography>
+              )}
             </AccordionSummary>
-            <AccordionDetails>
-              {CheckBoxWithText("Puffer Jackets")}
-              {CheckBoxWithText("Varsity Jacket")}
-            </AccordionDetails>
           </Accordion>
+          {/* Beauty Instrumnets Box */}
           <Accordion
             expanded={expanded === "panel3"}
             onChange={handleChange("panel3")}
           >
+            {/* Beauty Instruments Typography */}
             <AccordionSummary
               aria-controls="panel3d-content"
               id="panel3d-header"
             >
-              {CheckBoxWithText("Sports Wear")}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Beauty Instruments
+                </Typography>
+              )}
             </AccordionSummary>
-            <AccordionDetails>
-              {CheckBoxWithText("American Football Uniform")}
-              {CheckBoxWithText("Baseball Uniform")}
-              {CheckBoxWithText("Basketball Uniform")}
-              {CheckBoxWithText("Cricket Uniform")}
-              {CheckBoxWithText("Ice Hockey Uniform")}
-              {CheckBoxWithText("Lacrosse Uniform")}
-              {CheckBoxWithText("Soccer uniform")}
-            </AccordionDetails>
+          </Accordion>
+          {/* Surgical Instruments Accordian */}
+          <Accordion
+            expanded={expanded === "panel4"}
+            onChange={handleChange("panel4")}
+          >
+            <AccordionSummary
+              aria-controls="panel4d-content"
+              id="panel4d-header"
+            >
+              {/* Surgical Instruments Typography */}
+              {CheckBoxWithText(
+                <Typography
+                  sx={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#7d879c",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  Surgical Instruments{" "}
+                </Typography>
+              )}
+            </AccordionSummary>
           </Accordion>
         </Box>
       </Stack>

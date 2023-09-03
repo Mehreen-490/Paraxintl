@@ -4,17 +4,28 @@ import images from "../../assets/images";
 
 const ProductQuality = () => {
   return (
-    <Box sx={{ bgcolor: "#f6f6f6", px: 3, py: 4 }}>
-      <Grid container>
-        <Grid item xl={3} lg={3} md={6} xs={12} px={4}>
-          {/* Disposable Box */}
+    <Box
+      sx={{
+        bgcolor: "#f6f6f6",
+        px: {
+          sm: 3,
+          xs: 1,
+        },
+        py: 4,
+      }}
+    >
+      <Grid container rowSpacing={3}>
+        {/* Disposable Box */}
+        <Grid item xl={3} lg={3} md={6} sm={6} xs={12}>
           <Box
             sx={{
               display: "flex",
               borderRight: {
-                md: "1px solid #7d879c",
+                sm: "1px solid #7d879c",
                 xs: "none",
               },
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
             {/* Dispoasable Icon */}
@@ -37,7 +48,7 @@ const ProductQuality = () => {
               </Typography>
               <Typography
                 sx={{
-                  fontFamily: "",
+                  fontFamily: "'Open Sans', sans-serif",
                   fontWeight: 400,
                   fontSize: "14px",
                   lineHeight: "21px",
@@ -49,8 +60,8 @@ const ProductQuality = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid item xl={3} lg={3} md={6} xs={12} px={4}>
-          {/* Reusable Box */}
+        {/* Reusable Box */}
+        <Grid item xl={3} lg={3} md={6} sm={6} xs={12}>
           <Box
             sx={{
               display: "flex",
@@ -58,6 +69,8 @@ const ProductQuality = () => {
                 lg: "1px solid #7d879c",
                 xs: "none",
               },
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
             {/* Reusable Icon */}
@@ -92,18 +105,20 @@ const ProductQuality = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid item xl={3} lg={3} md={6} xs={12} px={2}>
-          {/* Wide Range Products Box */}
+        {/* Variety Products Box */}
+        <Grid item xl={3} lg={3} md={6} sm={6} xs={12}>
           <Box
             sx={{
               display: "flex",
               borderRight: {
-                md: "1px solid #7d879c",
+                sm: "1px solid #7d879c",
                 xs: "none",
               },
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
-            {/* Wide Range Products Icon */}
+            {/* Variety Products Icon */}
             <Avatar
               src={images.product_quality.wide_range}
               sx={{ width: "43px", height: "43px", borderRadius: "0" }}
@@ -119,7 +134,7 @@ const ProductQuality = () => {
                   color: "#2a2e39",
                 }}
               >
-                Wide Range Products
+                Variety Products
               </Typography>
               <Typography
                 sx={{
@@ -135,10 +150,16 @@ const ProductQuality = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid item xl={3} lg={3} md={6} xs={12} px={4}>
-          {/* Trained Workforce Box */}
-          <Box sx={{ display: "flex" }}>
-            {/* Trained Workforce Icon */}
+        {/* Trained Staff Box */}
+        <Grid item xl={3} lg={3} md={6} sm={6} xs={12}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {/* Trained Staff Icon */}
             <Avatar
               src={images.product_quality.trained_workforce}
               sx={{ width: "43px", height: "43px", borderRadius: "0" }}
@@ -154,7 +175,7 @@ const ProductQuality = () => {
                   color: "#2a2e39",
                 }}
               >
-                Trained Workforce
+                Trained Staff
               </Typography>
               <Typography
                 sx={{

@@ -14,13 +14,31 @@ function ApparelPage() {
     <Box sx={{ display: "flex", flexDirection: "column" }}>
       <Navbar />
       <MainSlider />
-      <Box sx={{ px: 8, py: 4 }}>
+      <Box
+        sx={{
+          px: {
+            md: 8,
+            sm: 4,
+            xs: 2,
+          },
+          py: 4,
+        }}
+      >
         <ProductQuality />
         <ProductCategoies />
         <Featuredproducts />
       </Box>
       <OverlaySection />
-      <Box sx={{ px: 8, py: 4 }}>
+      <Box
+        sx={{
+          px: {
+            md: 8,
+            sm: 4,
+            xs: 2,
+          },
+          py: 4,
+        }}
+      >
         <ProductSlider />
       </Box>
 

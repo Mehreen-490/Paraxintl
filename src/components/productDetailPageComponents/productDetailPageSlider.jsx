@@ -85,13 +85,10 @@ export default function ProductDetailPageSlider() {
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const images = [
-    "https://swiperjs.com/demos/images/nature-1.jpg",
-    "https://swiperjs.com/demos/images/nature-2.jpg",
-    "https://swiperjs.com/demos/images/nature-3.jpg",
-    "https://swiperjs.com/demos/images/nature-4.jpg",
-    "https://swiperjs.com/demos/images/nature-5.jpg",
-    "https://swiperjs.com/demos/images/nature-6.jpg",
-    "https://swiperjs.com/demos/images/nature-7.jpg",
+    "https://images.pexels.com/photos/397978/pexels-photo-397978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.unsplash.com/photo-1561328635-c1c6ad1753b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1411&q=80",
+    "https://images.pexels.com/photos/6631415/pexels-photo-6631415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/6291080/pexels-photo-6291080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   ];
 
   return (
@@ -100,13 +97,15 @@ export default function ProductDetailPageSlider() {
       width="100%"
       height="100%"
       className="productDetailPageSlider"
+      borderRadius="10px"
     >
       <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
           "--swiper-pagination-color": "#fff",
           width: "100%",
-          height: "80%",
+          height: "75%",
+          borderRadius: "10px 10px 0 0",
         }}
         spaceBetween={10}
         navigation={true}
@@ -129,7 +128,7 @@ export default function ProductDetailPageSlider() {
         className="mySwiper"
         style={{
           width: "100%",
-          height: "20%",
+          height: "25%",
         }}
       >
         {images.map((imageSrc, i) => {

@@ -4,13 +4,15 @@ import { Avatar, Button, Typography } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import images from "../../assets/images";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-
+import { NavLink } from "react-router-dom";
 const MuiNestedMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <Dropdown
       trigger={
         <Button
+          component={NavLink}
+          to="/product"
           disableRipple
           endIcon={<KeyboardArrowDownIcon sx={{ color: "#212a39" }} />}
           sx={{

@@ -3,7 +3,6 @@ import {
   Box,
   Card,
   CardHeader,
-  IconButton,
   Rating,
   Stack,
   Typography,
@@ -14,15 +13,23 @@ import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import { blue, red } from "@mui/material/colors";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { CardContent } from "@mui/joy";
 
 function createComment(title, description, color) {
+  const normalTextStyle = {
+    fontFamily: "'Open Sans', sans-serif",
+    fontSize: "14px",
+    lineHeight: "21px",
+    textTransform: "none",
+    letterSpacing: "0.3px",
+  };
   return (
     <Card
       sx={{
-        bgcolor: "transparent",
-        maxWidth: "70%",
+        bgcolor: "inherit",
+        maxWidth: "100%",
+        boxShadow: 0,
+        py: 1,
       }}
     >
       <CardHeader
@@ -33,17 +40,26 @@ function createComment(title, description, color) {
         }
         title={
           <Stack direction="row" alignItems="center">
-            <Typography fontWeight="bold">{title}</Typography> &nbsp;&nbsp;
+            <Typography fontWeight="bold" style={normalTextStyle}>
+              {title}
+            </Typography>{" "}
+            &nbsp;&nbsp;
             <Rating name="size-small" defaultValue={2} size="small" />
           </Stack>
         }
-        subheader="September 14, 2016"
+        subheader={
+          <Typography sx={{ ...normalTextStyle, color: "rgba(0,0,0,0.6)" }}>
+            September 14, 2016
+          </Typography>
+        }
       />
       <CardContent sx={{ px: 2 }}>
         <Typography
           variant="subtitle1"
           sx={{
+            ...normalTextStyle,
             color: "rgba(0,0,0,0.6)",
+            pl: 0.5,
           }}
         >
           {description}
@@ -59,66 +75,91 @@ function ProductDetailDescription() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+  const normalTextStyle = {
+    fontFamily: "'Open Sans', sans-serif",
+    fontSize: "14px",
+    lineHeight: "21px",
+    color: "#2b3445",
+    textTransform: "none",
+    letterSpacing: "0.5px",
+  };
   return (
-    <Box>
-      <Box
-        sx={{
-          borderTop: "2px solid black",
-          borderBottom: "2px solid black",
-          py: "3px",
-          textAlign: "center",
-          mt: 2,
-          background: "rgba(0,0,0,0.7)",
-          color: "white",
-        }}
-      >
-        <Typography variant="subtitle1">Description</Typography>
-      </Box>
-
+    <Box sx={{ width: "100%", py: 3 }}>
       <Box sx={{ width: "100%", typography: "body1", mt: 1 }}>
         <TabContext value={value}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <TabList onChange={handleChange} aria-label="lab API tabs example">
-              <Tab label="Description" value="1" />
-              <Tab label="Reviews (2)" value="2" />
+              <Tab
+                label={
+                  <Typography
+                    sx={{
+                      fontFamily: "",
+                      fontSize: "14px",
+                      lineHeight: "21px",
+                      color: "#2b3445",
+                      textTransform: "none",
+                      letterSpacing: "0.3px",
+                    }}
+                  >
+                    Description
+                  </Typography>
+                }
+                value="1"
+              />
+              <Tab
+                label={
+                  <Typography
+                    sx={{
+                      fontFamily: "'Open Sans', sans-serif",
+                      fontSize: "14px",
+                      lineHeight: "21px",
+                      color: "#2b3445",
+                      textTransform: "none",
+                      letterSpacing: "0.3px",
+                    }}
+                  >
+                    Reviews (2)
+                  </Typography>
+                }
+                value="2"
+              />
             </TabList>
           </Box>
           <TabPanel value="1">
             <ul>
               <li>
-                <Typography>100% Cotton</Typography>
+                <Typography style={normalTextStyle}>100% Cotton</Typography>
               </li>
               <li>
-                <Typography>Imported</Typography>
+                <Typography style={normalTextStyle}>Imported</Typography>
               </li>
               <li>
-                <Typography>Pull On closure</Typography>
+                <Typography style={normalTextStyle}>Pull On closure</Typography>
               </li>
               <li>
-                <Typography>Machine Wash</Typography>
+                <Typography style={normalTextStyle}>Machine Wash</Typography>
               </li>
               <li>
-                <Typography>
+                <Typography style={normalTextStyle}>
                   SOFT COTTON TO FEEL GOOD ABOUT – Traceable, US-grown, ringspun
                   cotton, produced using less water while yielding an ultra-soft
                   feel.
                 </Typography>
               </li>
               <li>
-                <Typography>
+                <Typography style={normalTextStyle}>
                   MADE FOR THE LONG HAUL – Higher stitch count and reinforced
                   shoulder seams makes this men’s t-shirt extra durable.
                 </Typography>
               </li>
               <li>
-                <Typography>
+                <Typography style={normalTextStyle}>
                   COMFORT IN THE DETAILS – Tonal back neck tape for no-chafe
                   comfort.
                 </Typography>
               </li>
               <li>
-                <Typography>
+                <Typography style={normalTextStyle}>
                   HOLDS THE SHAPE – Sturdy ribbed crewneck helps hold the shape
                   at the neck.
                 </Typography>

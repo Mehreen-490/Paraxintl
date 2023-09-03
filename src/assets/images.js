@@ -82,4 +82,16 @@ export default {
     castroviejo_miniature_corneal_scissors: require("./images/58.jpg"),
     corneal_scissors: require("./images/59.jpg"),
   },
+  product_page: {
+    assaf_muscle_hook: require("./images/60.png"),
+    barraquer: require("./images/61.png"),
+    barraquer_iris_scissors: require("./images/62.png"),
+    barraquer_speculum: require("./images/63.png"),
+    bell_taylor_vectis: require("./images/64.png"),
+    capsule: require("./images/65.png"),
+    capsulotomy_scissors: require("./images/66.png"),
+    chauvasse_strabismus_hook: require("./images/67.png"),
+    castroviejo_corneal_scissors: require("./images/68.png"),
+    cataract: require("./images/69.png"),
+  },
 };
