@@ -2,27 +2,36 @@ import { Box } from "@mui/material";
 import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import MainBox from "../components/productPageComponents/mainBox";
+import MainBox from "../components/productDetailPageComponents/mainBox";
 const ProductDetailPage = () => {
   return (
-    <Box
-      sx={{
-        backgroundImage:
-          "linear-gradient(to bottom, #52bffa, #bde7fd, #b5e4fd, #9cdafc)",
-        color: "#192d34",
-      }}
-    >
-      <Navbar />
-      <Box sx={{ display: "flex" }} width="100%">
-        <Box sx={{ width: "300px" }}>
-          <Sidebar />
-        </Box>
-        <Box sx={{ width: "calc(100% - 300px)" }}>
+    <>
+      <Box
+        sx={{
+          background: "#f6f9fc",
+          color: "#192d34",
+          px: {
+            lg: 6,
+            xs: 0,
+          },
+          py: 5,
+        }}
+      >
+        <Navbar />
+        <Box
+          sx={{
+            width: "100%",
+            px: {
+              md: 4,
+              xs: 1,
+            },
+          }}
+        >
           <MainBox />
         </Box>
       </Box>
       <Footer />
-    </Box>
+    </>
   );
 };
 

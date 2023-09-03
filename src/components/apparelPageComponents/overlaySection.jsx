@@ -25,12 +25,32 @@ const OverlaySection = () => {
         direction="row"
         sx={{
           position: "absolute",
-          top: "20%",
+          top: {
+            md: "20%",
+            xs: "20%",
+          },
           color: "white",
-          padding: "0px 6%",
+          py: "0",
+          px: {
+            sm: "6%",
+            xs: "2%",
+          },
+          height: "100%",
         }}
       >
-        <Box sx={{ width: "50%", padding: "5% 0px" }}>
+        <Box
+          sx={{
+            width: {
+              md: "50%",
+              xs: "0%",
+            },
+            py: "4%",
+            display: {
+              md: "block",
+              xs: "none",
+            },
+          }}
+        >
           <Typography variant="h6">
             No compromise when it comes to price or quality as we deliver both.
             With a Pakistan-based factory we manufacture Sports Wear, Casual
@@ -41,9 +61,12 @@ const OverlaySection = () => {
         </Box>
         <Box
           sx={{
-            width: "50%",
+            width: {
+              md: "50%",
+              xs: "100%",
+            },
 
-            padding: "0px 0px 00px 6%",
+            pl: "6%",
           }}
         >
           <Typography

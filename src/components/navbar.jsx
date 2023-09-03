@@ -23,11 +23,6 @@ function Navbar() {
           bgcolor: "white",
           color: "#212a39",
           justifyContent: "center",
-          pl: {
-            md: 3,
-            sm: 1,
-            xs: 0,
-          },
         }}
       >
         <Toolbar>
@@ -51,7 +46,7 @@ function Navbar() {
                   sx={{
                     py: 1,
                     px: {
-                      md: 3,
+                      sm: 1,
                       xs: 0,
                     },
                   }}

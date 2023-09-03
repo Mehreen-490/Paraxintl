@@ -67,7 +67,7 @@ const ProductSlider = () => {
             color: "#2a2e39",
           }}
         >
-          Featured Products
+          Selected Products
         </Typography>
       </Box>
       <Box w="100%">

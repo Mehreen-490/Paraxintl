@@ -82,13 +82,12 @@ function Item(props) {
     <>
       <Paper
         sx={{
-          height: "100%",
+          height: "100% ",
           width: "100%",
           backgroundImage: `url(${props.imageUrl})`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "100% 100%",
-          borderRadius: "10px",
         }}
       >
         <div className="carousel-item-content">
