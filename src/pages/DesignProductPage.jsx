@@ -1,14 +1,15 @@
 import { Box, Grid, Pagination, Stack } from "@mui/material";
 import React from "react";
 import Navbar from "../components/navbar";
-import Sidebar from "../components/productPageComponents/sidebar";
+import Sidebar from "../components/designProductPageComponents/sidebar";
 import Footer from "../components/footer";
-import ListGridBar from "../components/productPageComponents/listGridBar";
+import ListGridBar from "../components/designProductPageComponents/listGridBar";
 import images from "../assets/images";
-import ProductGridCard from "../components/productPageComponents/productGridCard";
 //eslint-disable-next-line
-import ProductListCard from "../components/productPageComponents/productListCard";
-const ApparelProductPage = () => {
+import ProductGridCard from "../components/designProductPageComponents/productGridCard";
+//eslint-disable-next-line
+import ProductListCard from "../components/designProductPageComponents/productListCard";
+const DesignProductPage = () => {
   const product_card_detail = [
     {
       id: 1,
@@ -175,4 +176,4 @@ const ApparelProductPage = () => {
   );
 };
 
-export default ApparelProductPage;
+export default DesignProductPage;
